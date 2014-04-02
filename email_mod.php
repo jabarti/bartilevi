@@ -23,7 +23,6 @@ else
 
 if (isset($_POST['mailform']) || isset($_GET['mailform'])){
     echo '<br>'.__LINE__.' '.$_POST['mailform'];
-//if (isset($_POST['mailform'])){
 
         if(isset($_POST['mail'])){
 //            $to = 'jabarti@wp.pl, ';        // note the comma
@@ -52,58 +51,40 @@ if (isset($_POST['mailform']) || isset($_GET['mailform'])){
             echo '<br>$subject: '.$subject;
             echo '<br>$message: '.$message;
             echo '<br>$headers: '.$headers;
+            
             if(($_POST['subject'])!='' || $_POST['message'] != ''){
+                
                 mail($to, $subject, $message, $headers) or die("<br>Nie wysłano maila");
+                
                 unset($_POST);
                 unset($_GET);
                 ?><script>
-//                    $("#potw").hide();
                     alert("Wysłany mail");
                   </script><?php
                   
                 header("Location: index.php?send=ok");
+                echo '<br>'.__line__.' | No.01 header("Location: index.php?send=ok")';
             } else {
-                ?><script>
-//                    $("#potw").hide();
-//                    var temp = document.getElementById('potw');
-//                    alert(temp);
-                    
+                ?><script>                  
                     alert ("Nie wysłany meil1!")
                  </script>
                 <?php
                   unset($_POST);
                   unset($_GET);
                   header("Location: index.php?send=no");
+                  echo '<br>'.__line__.' | No.02 header("Location: index.php?send=no")';
             }
             
         } catch (Exception $ex) {
             echo "ERROR: ".$ex;
         }
         
-        try{
-            echo "<br>Przed czyszczeniem: ".$_POST['subject'];
-            unset($_POST);
-            unset($_GET);
-
-            echo "<br>Po czyszczeniu: ".$_POST['subject'];
-            header("Location: index.php?send=ok");
-//            echo '
-//                <script type="text/javascript">
-//                    location.reload(true);
-//                </script>';
-
-        } catch (Exception $ex) {
-            echo "ERROR".$ex;
-        }
-        
         echo $_POST['mailform'];
 } else {
     ?><script>
-    $("#potw").show();
     alert ("Nie meil2!")
     </script><?php
 }
 
-
-//header("Location: index.php");
+header("Location: index.php");
 

@@ -17,7 +17,11 @@ if (isset($_GET['send'])){
     else
         $send = false;
     
-    echo $send;
+    echo 'SEND: ('.$send.')';
+    if($send)
+        echo "true";
+    else
+        echo "false";
 }
 ?>
 <p id="textTitle" style="color: black;">NAPISZ DO MNIE</p>
