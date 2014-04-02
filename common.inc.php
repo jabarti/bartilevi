@@ -1,5 +1,4 @@
 ﻿<?php
-
 /**
  * common.inc.php
  *
@@ -8,22 +7,18 @@
  * @author Bartosz Lewiński <jabarti@wp.pl>
  *
  */
-
-header('Content-Type: text/html; charset=utf-8'); 
- // LOAD CUSTOM SETTINGS
-/*if (file_exists(dirname(__FILE__) . DIRECTORY_SEPARATOR . '../config.inc.php')) {
-	require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . '../config.inc.php');
-}/**/
-
-//$tempPath = getenv('PATH');
-//$res = putenv('PATH=/opt/local/bin/:'.$tempPath);
-
-
-if (!defined('MAX_MAIL_BATCH')) {
-	define('MAX_MAIL_BATCH', 1); // Maximum number of emails to send while running the newsletter mailer job.
+if(!isset($_SESSION)){
+    ob_start();
+    session_start();
+//    var_dump($_SESSION);
+}else{
+//    var_dump($_SESSION);
 }
-
-session_start();
+//echo '<div id=DBConn>';
+//    echo session_id();
+//echo '</div>';
+    
+header('Content-Type: text/html; charset=utf-8'); 
 
 // DEFINE DIRECTORIES
 define('BASE_PATH', dirname(__FILE__));
@@ -54,57 +49,31 @@ echo 'linia: '.__LINE__.' PAGE_THUMBS_PATH: '.PAGE_THUMBS_PATH.'<br>';
 echo 'linia: '.__LINE__.' =============================================<br>';
 /**/
 
-// DEFAULT LANGUAGE
-//define("DEFAULT_LANGUAGE", "no");
-
-
-// INCLUDE FILES - DO NOT TOUCH SEQUENCE
-//die("a");
-/*require_once(INCLUDE_PATH . DIRECTORY_SEPARATOR . 'classes.inc.php');
-require_once(INCLUDE_PATH . DIRECTORY_SEPARATOR . 'pear.inc.php');
-
-require_once(INCLUDE_PATH . DIRECTORY_SEPARATOR . 'db.inc.php');
-
-require_once(INCLUDE_PATH . DIRECTORY_SEPARATOR . 'localization.inc.php');
-
-if (!AUTO_LOGIN) { 
-	require_once(INCLUDE_PATH . DIRECTORY_SEPARATOR . 'auth.inc.php');
-}/**/
 mysql_query('SET NAMES utf8');
 
 mb_internal_encoding('UTF-8');
 
-/*** Ed stuff: ***/
-define('DATA_DIR', BASE_PATH);
 
-function db_query($sql)
-{
-	$ret = @mysql_query($sql);
-	
-	if (!$ret)
-		die('MySQL query failed: '.$sql.' Error message: '.mysql_error());//,$sql,mysql_error());
-	return $ret;
-}
+//define('DATA_DIR', BASE_PATH);
 
-
-//initPage();
-
-//require_once(INCLUDE_PATH . DIRECTORY_SEPARATOR . 'identifyImage.php');
-
-if (!defined('DO_NOT_CLOSE_SESSION')) {
-	session_write_close();
-}
 
 //    include CLASSES_PATH.DIRECTORY_SEPARATOR.'osoba.class.php';
 //    include CLASSES_PATH.DIRECTORY_SEPARATOR.'Person.class.php';
 //    include 'Classes/translations.inc.php';
 
-if (isset($_GET['lang'])){
-    $_SESSION['lang'] = $_GET['lang'];
+if (isset($_GET['lang'])||isset($_SESSION['lang'])){
+    if(isset($_GET['lang']))
+        $_SESSION['lang'] = $_GET['lang'];
 } else {
-    $_SESSION['lang'] = "PL";
+    $_SESSION['lang'] = "pl";
 }
-echo "LANG = ".$_SESSION['lang'];
 
+//if (isset($_SESSION['user_mail']))
+//    echo '<br>'.$_SESSION['user_mail'];
+//else {
+//    echo '<br>No $_SESSION["user_mail"]';
+//}
 
-//phpinfo();
+//echo "<br>LANG = ".$_SESSION['lang'];
+//echo "<br>MAIL = ".$_SESSION['user_mail'].'<br>';
+

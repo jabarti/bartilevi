@@ -7,7 +7,7 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
-include 'common.inc.php';
+require_once "common.inc.php";
 include 'DB_Connection.php';
 //include 'common.inc.php';
 $title = 'BartiLevi | Main Page';
@@ -15,6 +15,7 @@ include 'header.php';
 include 'flag.php';
 include 'buttons.php';
 //include 'mail.php';
+
 ?>
 <body>
     <div id="glowny_index">

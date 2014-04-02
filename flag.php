@@ -8,6 +8,7 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
+//echo session_id();
 if($_SESSION['lang']){
     switch ($_SESSION['lang']){
         case 'pl':
