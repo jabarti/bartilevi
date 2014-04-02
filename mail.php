@@ -18,6 +18,7 @@ if (isset($_GET['send'])){
         $send = false;
     
     echo 'SEND: ('.$send.')';
+    
     if($send)
         echo "true";
     else

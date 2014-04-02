@@ -1,5 +1,4 @@
 <?php
-
 /* * **************************************************
  * Project:     BartiLevi_WEB
  * Filename:    cleaner.php
@@ -15,6 +14,8 @@ $title = 'BartiLevi | Main Page';
 include 'header.php';
 include 'flag.php';
 include 'buttons.php';
+
+var_dump($_POST);
 
 if ($_SERVER["REMOTE_ADDR"] == '85.202.150.195')
     $MyServ = "MyServer!";
@@ -53,7 +54,7 @@ if (isset($_POST['mailform']) || isset($_GET['mailform'])){
             echo '<br>$headers: '.$headers;
             
             if(($_POST['subject'])!='' || $_POST['message'] != ''){
-                
+                echo "<br>WYSYŁANY MAIL!!!";
                 mail($to, $subject, $message, $headers) or die("<br>Nie wysłano maila");
                 
                 unset($_POST);
@@ -86,5 +87,5 @@ if (isset($_POST['mailform']) || isset($_GET['mailform'])){
     </script><?php
 }
 
-header("Location: index.php");
+//header("Location: index.php");
 
