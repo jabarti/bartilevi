@@ -37,7 +37,7 @@ $res = mysql_query($sql);
 <table>
     <?php while($row = mysql_fetch_array($res)){ ?>
     <tr>
-    <form name=pupa action="Translations/translation_panel_mod.php" method="get">
+    <form action="Translations/translation_panel_mod.php" method="get">
             <td><input type="text" size=1 name="lang" value="<?php echo $row[0]; ?>" readonly="readonly"></td>
             <td><input type="text" size=50% name="key" value="<?php echo $row[1]; ?>" readonly="readonly"></td>
             <td><input type="text" size=50% name="translation" value="<?php echo $row[2]; ?>" ></td>
