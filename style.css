@@ -66,6 +66,8 @@ div#glowny_index {
 	height: auto;
 	padding: 10px;
 	float:right;
+        margin-left: auto;
+        right: auto;
 	/*color: white;*/
 	}
         
