@@ -20,7 +20,7 @@ include 'buttons.php';
 <body>
     <div id="glowny_index">
         <?php
-            include 'Classes/translation_panel.php';
+            include 'Translations/translation_panel.php';
         ?>
     </div>
 </body>
