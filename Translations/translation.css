@@ -3,6 +3,18 @@
     Created on : 2014-04-03, 21:38:21
     Author     : Bartek M. Lewiński
 */
+div#glowny_index {
+	background: grey/*blue/*black*/;
+        top:450px;
+	width: 880px; 
+	height: auto;
+	padding: 10px;
+	float:right;
+        margin-left: auto;
+        right: auto;
+	/*color: white;*/
+}
+        
 div.flag {
     background-color: silver;
     position: fixed;
