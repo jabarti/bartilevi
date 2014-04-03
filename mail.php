@@ -26,35 +26,35 @@ if (isset($_SESSION['user_mail'])){
     $user_mail = '';
 }
 ?>
-<p id="textTitle" style="color: black;">NAPISZ DO MNIE</p>
+<p id="textTitle" style="color: black;"><?php t("NAPISZ DO MNIE"); ?></p>
 <form name="formatka" action="email_mod.php" method="post">
     <table>
         <tr id="selfmail">
-            <td><label for="text">Podaj swój mail:</label></td>
+            <td><label for="text"><?php t("Podaj swój mail"); ?>:</label></td>
             <td><input id="mail" type="text" name="mail" value="<?php echo $user_mail; ?>"></td>
         </tr>
         <tr>
-            <td><label for="subject">Temat:</label></td>
+            <td><label for="subject"><?php t("Temat"); ?>:</label></td>
             <td><input id="subject" type="text" name="subject"></td>
         </tr>
         <tr>
-            <td><label for="text">Podaj treść:</label></td>
+            <td><label for="text"><?php t("Treść"); ?>:</label></td>
             <td><textarea id="message"  rows="4" cols="30" name="message"></textarea></td>
         </tr>
         <tr>
-            <td><label for="chac">Czy chcesz kopię?:</label></td>
+            <td><label for="chac"><?php t("Czy chcesz kopię"); ?>?:</label></td>
             <td><input id="chac" type="checkbox" name="chac" </td>
         </tr>
         <tr>
             <td></td>
-            <td><input name=mailform type="submit" value="Wyślij"></td>
+            <td><input name=mailform type="submit" value="<?php t("Wyślij"); ?>"></td>
         </tr>
     </table>
 </form>
 <?php if($send == 1){ 
-     echo '<p id="potw">Mail wysłany!</p>';
+     echo '<p id="potw">'.t("Mail wysłany").'!</p>';
 }else if($send == -1){
-    echo '<p id="potw">Mail nie wysłany - brak tematu lub/i treści</p>';
+    echo '<p id="potw">'.t("Mail nie wysłany").' - '.t("brak tematu").' '.t("lub").'/'.t("i").' '.t("treści").'</p>';
 } else {
     echo '<p id="potw">:)</p>';
 }

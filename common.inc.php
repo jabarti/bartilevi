@@ -61,12 +61,15 @@ mb_internal_encoding('UTF-8');
 //    include CLASSES_PATH.DIRECTORY_SEPARATOR.'Person.class.php';
 //    include 'Classes/translations.inc.php';
 
+
 if (isset($_GET['lang'])||isset($_SESSION['lang'])){
     if(isset($_GET['lang']))
         $_SESSION['lang'] = $_GET['lang'];
 } else {
     $_SESSION['lang'] = "pl";
 }
+
+    include 'Classes/translacjon.php';
 
 //if (isset($_SESSION['user_mail']))
 //    echo '<br>'.$_SESSION['user_mail'];

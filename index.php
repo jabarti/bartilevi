@@ -10,20 +10,31 @@
 require_once "common.inc.php";
 include 'DB_Connection.php';
 //include 'common.inc.php';
-$title = 'BartiLevi | Main Page';
+$title = 'BartiLevi | Strona Główna';
 include 'header.php';
 include 'flag.php';
 include 'buttons.php';
 //include 'mail.php';
 
+
 ?>
 <body>
+    <div class=transbutton><button onclick="location.href='translation_panel.php'"><?php t("Translacje")?></button></div> 
     <div id="glowny_index">
-         <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;">STRONA W BUDOWIE v (NA BUDOWIE???? :) )</h4>
+         <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php t("STRONA W BUDOWIE")?> v (<?php t("NA BUDOWIE")?>??? :)</h4>
         <div id="glowny_wew">
             <!--<div><table style="background-image:url('img/Barti_dyplomII.JPG');width: 265px; height:350px"><tr><td></td></tr></table></div>-->
             <img src="img/Barti_dyplomII.JPG" alt="No Picture available" style="position: relative; height: 300px;"/>
-            <div><p>Ego sum :)</p></div>
+            <div>
+                <p>Ego sum :)</p>
+            </div>
+        </div>
+        <div id="glowny_wew">
+                <p><?php t("Cogito ergo sumq");?></p>
+                <p><?php t("Cogito ergo sum");?></p>
+                <p><?php t("Cogito ergo sumq");?></p>
+                <p><?php t("Cogito ergo sum");?></p>
+                <p><?php t('Wersja');?></p>
         </div>
         <div id="glowny_wew">
             <?php include 'mail.php'; ?>
