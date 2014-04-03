@@ -69,7 +69,7 @@ if (isset($_GET['lang'])||isset($_SESSION['lang'])){
     $_SESSION['lang'] = "pl";
 }
 
-    include 'Classes/translacjon.php';
+    include 'Translations/translacjon.php';
 
 //if (isset($_SESSION['user_mail']))
 //    echo '<br>'.$_SESSION['user_mail'];

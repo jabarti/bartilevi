@@ -9,14 +9,10 @@
  * ************************************************* */
 require_once "common.inc.php";
 include 'DB_Connection.php';
-//include 'common.inc.php';
 $title = 'BartiLevi | Strona Główna';
 include 'header.php';
 include 'flag.php';
 include 'buttons.php';
-//include 'mail.php';
-
-
 ?>
 <body>
     <div class=transbutton><button onclick="location.href='translation_panel.php'"><?php t("Translacje")?></button></div> 
