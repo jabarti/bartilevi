@@ -14,6 +14,6 @@ $title = 'BartiLevi | phpinfo()';
 include 'header.php';
 include 'flag.php';
 include 'buttons.php';
-
+include 'Translations/flag.php';
 phpinfo();
 ?>

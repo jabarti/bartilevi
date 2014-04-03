@@ -11,11 +11,11 @@ require_once "common.inc.php";
 include 'DB_Connection.php';
 $title = 'BartiLevi | Strona Główna';
 include 'header.php';
-include 'flag.php';
 include 'buttons.php';
+include 'Translations/flag.php';
 ?>
 <body>
-    <div class=transbutton><button onclick="location.href='translation_panel.php'"><?php t("Translacje")?></button></div> 
+    <!--<div class=transbutton><button onclick="location.href='translation_panel.php'"><?php t("Translacje")?></button></div>--> 
     <div id="glowny_index">
          <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php t("STRONA W BUDOWIE")?> v (<?php t("NA BUDOWIE")?>??? :)</h4>
         <div id="glowny_wew">

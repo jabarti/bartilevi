@@ -42,6 +42,13 @@ div.transbutton {
     padding: 2px;
     border: 1px solid #263666;
 }
+div.transbutton2 {
+    position: fixed;
+    bottom:60px;
+    left:120px;
+    padding: 2px;
+    border: 1px solid #263666;
+}
 
 div.flag a{
     width: 100px;

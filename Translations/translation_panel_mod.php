@@ -27,7 +27,7 @@ if(isset($_GET['tlum'])){
         echo "<br>SQL = ".$sql;
         
         if(mysql_query($sql)){
-            header("Location: ../translation_panel.php");
+            header("Location: ../translation_interface.php");
         }else{
             echo "<br>ERROR in sql";
         }
