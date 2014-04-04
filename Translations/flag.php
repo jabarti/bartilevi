@@ -11,17 +11,16 @@
 //echo session_id(); 
 if($chang == 1){
 ?>
-<div class=transbutton><button onclick="window.history.back()"><?php t("Cofnij")?></button><br> 
-<button onclick="window.location.href='../index.php'"><?php t("Powrót do")?> index</button></div> 
+<div class=transbutton><button onclick="window.history.back()"><?php echo t("Cofnij")?></button><br> 
+<button onclick="window.location.href='../index.php'"><?php echo t("Powrót do")?> index</button></div> 
 <?php
 $chang = 0;
 }else{
 ?>
-    <div class=transbutton><button onclick="location.href='translation_interface.php'"><?php t("Translacje")?></button></div> 
+    <div class=transbutton><button onclick="location.href='translation_interface.php'"><?php echo t("Translacje")?></button></div> 
 <?php
 }
 if(isset($_SESSION['lang'])){
-    echo $_SESSION['lang'];
     switch ($_SESSION['lang']){
         case 'pl':
             

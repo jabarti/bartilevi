@@ -26,28 +26,28 @@ if (isset($_SESSION['user_mail'])){
     $user_mail = '';
 }
 ?>
-<p id="textTitle" style="color: black;"><?php t("NAPISZ DO MNIE"); ?></p>
+<p id="textTitle" style="color: black;"><?php echo t("NAPISZ DO MNIE"); ?></p>
 <form name="formatka" action="email_mod.php" method="post">
     <table>
         <tr id="selfmail">
-            <td><label for="text"><?php t("Podaj swój mail"); ?>:</label></td>
+            <td><label for="text"><?php echo t("Podaj swój mail"); ?>:</label></td>
             <td><input id="mail" type="text" name="mail" value="<?php echo $user_mail; ?>"></td>
         </tr>
         <tr>
-            <td><label for="subject"><?php t("Temat"); ?>:</label></td>
+            <td><label for="subject"><?php echo t("Temat"); ?>:</label></td>
             <td><input id="subject" type="text" name="subject"></td>
         </tr>
         <tr>
-            <td><label for="text"><?php t("Treść"); ?>:</label></td>
+            <td><label for="text"><?php echo t("Treść"); ?>:</label></td>
             <td><textarea id="message"  rows="4" cols="30" name="message"></textarea></td>
         </tr>
         <tr>
-            <td><label for="chac"><?php t("Czy chcesz kopię"); ?>?:</label></td>
+            <td><label for="chac"><?php echo t("Czy chcesz kopię"); ?>?:</label></td>
             <td><input id="chac" type="checkbox" name="chac" </td>
         </tr>
         <tr>
             <td></td>
-            <td><input name=mailform type="submit" value="<?php t("Wyślij"); ?>"></td>
+            <td><input name=mailform type="submit" value="<?php echo t("Wyślij"); ?>"></td>
         </tr>
     </table>
 </form>
