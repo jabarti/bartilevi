@@ -11,7 +11,8 @@
 //echo session_id(); 
 if($chang == 1){
 ?>
-    <div class=transbutton><button onclick="window.history.back()"><?php t("Powrót")?></button></div> 
+<div class=transbutton><button onclick="window.history.back()"><?php t("Cofnij")?></button><br> 
+<button onclick="window.location.href='../index.php'"><?php t("Powrót do")?> index</button></div> 
 <?php
 $chang = 0;
 }else{

@@ -22,8 +22,25 @@ if(isset($_GET['tlum'])){
 //    if($_GET['translation'] == ''){
 //        header("Location: ../translation_panel.php");
 //    }else{
-        $sql = "UPDATE `localization` SET `translation`='".$_GET['translation']."' "
-                . "WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
+        $sql = "UPDATE `localization` SET `translation`='".$_GET['translation']."'"
+              ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
+        echo "<br>SQL = ".$sql;
+        
+        if(mysql_query($sql)){
+            header("Location: ../translation_interface.php");
+        }else{
+            echo "<br>ERROR in sql";
+        }
+//    }
+}
+
+if(isset($_GET[del])){
+        
+//    if($_GET['translation'] == ''){
+//        header("Location: ../translation_panel.php");
+//    }else{
+        $sql = "DELETE FROM `localization`"
+              ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
         echo "<br>SQL = ".$sql;
         
         if(mysql_query($sql)){

@@ -10,20 +10,28 @@
  * ************************************************* */
 //if (isset($_GET['jezyk'])) echo $_GET['jezyk'];
 
-$curr_lang = isset($_GET['jezyk']) ? $_GET['jezyk'] : $_SESSION['lang'];
+$Temp_em = false;
+if(isset($_GET['empty'])){
+    if($_GET['val']=='puste'){
+        $_SESSION['empty'] = "AND `translation` = ''";
+        $Temp_em = true;
+    }else{
+        $_SESSION['empty'] = '';
+        $Temp_em = false;
+    }
+} else {
+    if(isset($_SESSION['empty']) && $_SESSION['empty'] != ''){
+        $Temp_em = true;
+    }
+}
+$empty = $_SESSION['empty'];
+
+$curr_lang = isset($_GET['jezyk']) ? $_GET['jezyk'] : $_SESSION['lang']; 
 //$sql = "SELECT * FROM `localization` WHERE `lang` = 'pl';";
-$sql = "SELECT * FROM `localization` WHERE `lang` = '".$curr_lang."' ORDER BY `localization`.`key` ASC;";
-echo $sql;
+$sql = "SELECT * FROM `localization` WHERE `lang` = '".$curr_lang."' ".$empty." ORDER BY `localization`.`key` ASC;";
+//echo $sql;
 $res = mysql_query($sql);
-//$row = mysql_fetch_row($res);
 
-//var_dump($res);
-//var_dump($row);
-
-//while($row = mysql_fetch_array($res)){
-//    echo '<br>'.$row[0]." / ".$row[1]." / ".$row[3];
-//}
-//foreach ($row as $k => )
 ?>
 <form action="" method="get">
     <select name=jezyk id="langchoser">
@@ -34,6 +42,19 @@ $res = mysql_query($sql);
     <input type="submit" value="<?php t("Zmień język"); ?> =>">
 </form>
 
+<div>
+    <form action="" method="get">
+        <?php if($Temp_em == false){ ?>
+                    <input type="hidden" name="val" value="puste">
+                    <input type="submit" name="empty" value="<?php t("Wyświetl tylko puste"); ?>"/>
+        <?php } else { ?>
+                    <input type="hidden" name="val" value="pelne">
+                    <input type="submit" name="empty" value="<?php t("Wyświetl wszystkie"); ?>"/>
+        <?php }?>
+                    
+    </form>
+</div>
+
 <table>
     <?php while($row = mysql_fetch_array($res)){ ?>
     <tr>
@@ -42,6 +63,7 @@ $res = mysql_query($sql);
             <td><input type="text" size=50% name="key" value="<?php echo $row[1]; ?>" readonly="readonly"></td>
             <td><input type="text" size=50% name="translation" value="<?php echo $row[2]; ?>" ></td>
             <td><input name=tlum type="submit" value="<?php t("Zapisz"); ?> =>"></td>       
+            <td><input name=del type="submit" value="<?php t("Usuń"); ?> =>"></td>       
         </form>
     </tr>
     <?php } ?>

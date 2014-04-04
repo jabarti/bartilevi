@@ -14,10 +14,10 @@ if(!isset($_SESSION)){
 }else{
 //    var_dump($_SESSION);
 }
-//echo '<div id=DBConn>';
-//    echo session_id();
-//echo '</div>';
-    
+if(!isset($ref)){
+    $ref = $_SERVER['HTTP_REFERER'];
+}
+
 header('Content-Type: text/html; charset=utf-8'); 
 
 // DEFINE DIRECTORIES
