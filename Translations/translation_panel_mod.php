@@ -29,7 +29,7 @@ if(isset($_GET['tlum'])){
         if(mysql_query($sql)){
             header("Location: ../translation_interface.php");
         }else{
-            echo "<br>ERROR in sql";
+            echo "<br>ERROR in sql:".strlen($sql);
         }
 //    }
 }
@@ -41,12 +41,16 @@ if(isset($_GET[del])){
 //    }else{
         $sql = "DELETE FROM `localization`"
               ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
+//        $sql = "DELETE FROM `localization`WHERE `key`='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n incididunt ut labore et dolore magna aliqua.' AND `lang`='en';";
+//        $sql = "DELETE FROM `localization`WHERE                                                                 `key` = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\\n incididunt ut labore et dolore magna aliqua.' AND `lang`='en';";
+//        $sql = "DELETE FROM `bartilev_APIPO`.`localization` WHERE `localization`.`lang` = 'en' AND `localization`.`key` = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n incididunt ut labore et dolore magna aliqua.'"; 
         echo "<br>SQL = ".$sql;
         
         if(mysql_query($sql)){
+            echo '<br>HEADR';
             header("Location: ../translation_interface.php");
         }else{
-            echo "<br>ERROR in sql";
+            echo "<br>ERROR in sql:".strlen($sql).$sql;
         }
 //    }
 }
