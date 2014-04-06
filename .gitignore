@@ -11,3 +11,4 @@ nbproject
 DB_Connection.php
 ExternalResources/Oracle_modeler
 ExternalResources/Notes
+Documents/*

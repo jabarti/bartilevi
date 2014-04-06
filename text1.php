@@ -8,14 +8,14 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
-echo t("ala ma kota").'<br>';
+//echo t("ala ma kota").'<br>';
 
-echo t("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor "
-        . "incididunt ut labore et dolore magna aliqua.");
-
-echo t(   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, "
-        . "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        ).'<br>';
+//echo t("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor "
+//        . "incididunt ut labore et dolore magna aliqua.");
+//
+//echo t(   "Lorem ipsum dolor sit amet, consectetur adipisicing elit, "
+//        . "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+//        ).'<br>';
 
 echo t("At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti"
         . " atque corrupti quos um dolor sit amet, consectetur ad um dolor sit amet, consectetur ad non provident, "

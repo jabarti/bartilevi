@@ -123,7 +123,7 @@ div.guziki {
 position:fixed;
 top:30px;
 right:5px;
-background: red;
+background: whitesmoke;
 width:180px;
 padding:5px;
 border:2px solid black;
@@ -149,6 +149,7 @@ width: 40%;
         box-shadow: 4px 3px 0px 0px #284470;
         
         background-color:#415989;
+        /*background-color:#D0E4FE;*/
         
         -moz-border-radius:18px;
         -webkit-border-radius:18px;
@@ -158,6 +159,7 @@ width: 40%;
         
         display:inline-block;
         color:#ffffff;
+        /*color:#000000;*/
         font-family:arial;
         font-size:13px;
         font-weight:normal;
@@ -187,3 +189,154 @@ width: 40%;
         
 	/*position: relative; height: 170px;*/
 }
+
+/* STYLE do MENU*/
+ 
+      /* ------------------------CZĘŚĆ-GÓRNA-MENU------------------------ */
+
+      /* usunięcie domyślnych właściwości CSS z elementów - ol - oraz - ul */
+      #menu, #menu ul, #menu ol {
+        list-style-type:none;       // To usuwa domyślne numerki przy liście
+        padding:0;
+        margin:0;
+      }
+
+      /* wygląd głównego elementu - ol */
+      #menu {
+        /*background-color:#FFF;*/
+        background-color:#415989;
+        font-size:12px;
+        height:2em;
+        line-height:2em;
+        text-align:center;
+      }
+
+      /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ol */
+      #menu a {
+        display:block;
+        text-decoration:none;
+        color:#000;
+        padding:0 5px;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol */
+      #menu > li {
+        float:left;
+        width:120px;
+        margin-left:1px;
+        background-color:#FDD700;
+        background-color: whitesmoke;
+        height:2em;
+        position: relative;
+        left: -35px;
+      }
+
+      /* wygląd elementu - li - pierwszego dziecka elementu - ol */
+      #menu > li:first-child {
+        margin-left:0;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+      /* Czyli elementów górnego menu */
+      #menu > li:hover {
+        background-color:#EEE;  
+        background-color: #CCC;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      /* Czyli "napisu" wewnątrz"" */ 
+      #menu > li:hover > a {
+        color:#09C;
+        /*color:red;*/
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      #menu > li:hover > ul {
+        display:block;
+        width:120px;
+        position: relative;
+        left: -40px;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU-POZIOM-1----------------------- */
+
+      /* wygląd głównych rozwijanych elementów - ul */
+      #menu > li > ul {
+        display:none;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej */
+      #menu > li > ul > li {
+        position:relative;
+        background-color:#EEE;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej */
+      #menu > li > ul > li > a {
+        border-top:1px solid #FFF;
+      }
+
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+      #menu > li > ul > li:hover {
+        background-color:#DDD;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      #menu > li > ul > li:hover > a {
+        color:#09C;
+      }
+
+      /* ------------------------CZĘŚĆ-ROZWIJANA-MENU-POZIOM-2----------------------- */
+
+      /* wygląd głównego elementu - ol - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol {
+        display:none;
+        width:100%;
+        position:absolute;
+        left:64%;
+        margin-top:-2em;
+        z-index: 99;
+      }
+
+      /* wygląd głównego elementu - ol - w drugiej części rozwijanej, po najechaniu kursorem myszki na jego rodzica - li */
+      #menu > li > ul > li:hover > ol {
+        display:block;
+        z-index: 99;
+      }
+
+      /* wygląd elementów - li - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol > li {
+        background-color:#CCC;
+      }
+
+      /* wygląd elementów - a - w drugiej części rozwijanej */
+      #menu > li > ul > li > ol > li > a {
+        border-top:1px solid #FFF;
+        border-left:1px solid #FFF;
+      }
+
+      /* wygląd elementu - a - w drugiej części rozwijanej, po najechaniu kursorem myszki */
+      #menu > li > ul > li > ol > li > a:hover {
+        color:#09C;
+      }
+
+      /* ------------------------WSPÓLNE----------------------- */
+
+      /* zaokrąglone rogi wszystkich elementów - li - oraz - a */
+      #menu li, ol a {
+        border-radius:6px;
+      }
+
+      /* strzałka w prawo */
+      #menu .dol {
+        background-image:url('img/down.png');
+        background-repeat:no-repeat;
+        background-position:98% center;
+      }
+
+      /* strzałka w dół */
+      #menu .prawo {
+        background-image:url('img/right.png');
+        background-repeat:no-repeat;
+        background-position:98% center;
+      }

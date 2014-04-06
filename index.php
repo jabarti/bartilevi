@@ -15,10 +15,12 @@ include 'buttons.php';
 include 'Translations/flag.php';
 ?>
 <body>
-    <!--<div class=transbutton><button onclick="location.href='translation_panel.php'"><?php t("Translacje")?></button></div>--> 
+<?php
+include 'Menu.php';
+?>
     <div id="glowny_index" >
          <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php echo t("STRONA W BUDOWIE")?> v (<?php echo t("NA BUDOWIE")?>??? :)</h4>
-        <div id="glowny_wew" style="column-count: 3; -moz-column-count: 3; -webkit-column-count: 3">
+        <div id="glowny_wew" style="column-count: 2; -moz-column-count: 2; -webkit-column-count: 2">
             <!--<div><table style="background-image:url('img/Barti_dyplomII.JPG');width: 265px; height:350px"><tr><td></td></tr></table></div>-->
             <img src="img/Barti_dyplomII.JPG" alt="No Picture available" style="position: relative; height: 200px;"/>
             <div>
