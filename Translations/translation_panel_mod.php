@@ -24,7 +24,7 @@ if(isset($_GET['tlum'])){
 //    }else{
         $sql = "UPDATE `localization` SET `translation`='".$_GET['translation']."'"
               ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
-        echo "<br>SQL = ".$sql;
+//        echo "<br>SQL = ".$sql;
         
         if(mysql_query($sql)){
             header("Location: ../translation_interface.php");

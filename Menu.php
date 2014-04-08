@@ -12,7 +12,42 @@
   <ol id="menu">
     <li class="dol"><a href="#"><?php echo t("MENU") ?></a>
       <ul>
-        <li><a href="Documents/CV Bartka 2013.11.14 - inf_PL.pdf" ><?php echo t("Życiorys") ?> PDF</a></li>
+        <li class="prawo"><a href="Documents/CV Bartka 2013.11.14 - inf_PL.pdf" ><?php echo t("Życiorys") ?> PDF</a>
+            <ol>
+                <li><a href="#" class="topopup1" ><?php echo t("Przedstawienie") ?></a>
+                            <div id="toPopup1">       
+                               <?php include "Documents/CV interactive/001 Head.php"?>
+                            </div>
+                </li>
+                <li><a href="#" class="topopup2" ><?php echo t("Wykształcenie") ?></a></li>
+                            <div id="toPopup2">       
+                               <?php include "Documents/CV interactive/002 Wyksztalcenie.php"?>
+                            </div>
+                <li><a href="#" class="topopup3" ><?php echo t("Przebieg zatrudnienia") ?></a></li>
+                            <div id="toPopup3">       
+                               <?php include "Documents/CV interactive/003 Przebieg.php"?>
+                            </div>
+                <li><a href="#" class="topopup4" ><?php echo t("Znajomość języków") ?></a></li>
+                            <div id="toPopup4">       
+                               <?php include "Documents/CV interactive/004 Jezyki.php"?>
+                            </div>
+                <li><a href="#" class="topopup5" ><?php echo t("Umiejętności IT") ?></a></li>
+                            <div id="toPopup5">       
+                               <?php include "Documents/CV interactive/005 Komputer.php"?>
+                            </div>
+                <li><a href="#" class="topopup6" ><?php echo t("Inne umiejętności") ?></a></li>
+                            <div id="toPopup6">       
+                               <?php include "Documents/CV interactive/006 Inne.php"?>
+                            </div>
+                <li><a href="#" class="topopup7" ><?php echo t("W wolnym czasie") ?></a></li>
+                            <div id="toPopup7">       
+                               <?php include "Documents/CV interactive/007 Hobby.php"?>
+                            </div>
+                
+<!--            <li><a href="#"><?php echo t("") ?></a></li>
+                <li><a href="#"><?php echo t("") ?></a></li>-->
+          </ol>
+        </li>
         
         <?php if($_SESSION['lang']=='pl'){ ?>
         <li><a href="Documents/CCF20130926_00000.jpg" ><?php echo t("Dyplomy") ?> PDF</a></li>
@@ -24,37 +59,36 @@
 
         <li class="prawo"><a href="#"><?php echo t("Projekty") ?></a>
           <ol>
-            <li><a href="http://www.dibuco.no/" target="blank"><?php echo t("Projekt") ?> Dprint</a></li>
-            <li><a href="http://www.bartilevi.pl/Transport_Proj_Zesp/htdocs/"><?php echo t("Project") ?> "<?php echo t("Transport")?>"</a></li>
-            <li><a href="#"><?php echo t("") ?></a></li>
-            <li><a href="#"><?php echo t("") ?></a></li>
+            <li><a href="http://www.dibuco.co.uk/?page_id=1109" target="blank"><?php echo t("Projekt") ?> Dprint</a></li>
+            <li><a href="http://www.bartilevi.pl/Transport_Proj_Zesp/htdocs/"><?php echo t("Projekt") ?> "<?php echo t("Transport")?>"</a></li>
+<!--            <li><a href="#"><?php echo t("") ?></a></li>
+            <li><a href="#"><?php echo t("") ?></a></li>-->
           </ol>
         </li>
 
-        <li class="prawo"><a href="#"><?php echo t("") ?></a>
+        <li class="prawo"><a href="#"><?php echo t("Referencje") ?></a>
+          <ol>
+            <li><a href="http://www.wispgroup.com/Contact.aspx" target="blank">WISP Group<br>Sp.z o.o.</a></li>
+          </ol>
+        </li>
+        
+<!--        <li class="prawo"><a href="#"><?php echo t("") ?></a>
           <ol>
             <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>
           </ol>
-        </li>
-        <li class="prawo"><a href="#"><?php echo t("") ?></a>
+        </li>-->
+        
+<!--        <li class="prawo"><a href="#"><?php echo t("") ?></a>
           <ol>
             <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>
           </ol>
-        </li>
-        <li class="prawo"><a href="#"><?php echo t("") ?></a>
-          <ol>
-            <li><a href="#"><?php echo t("") ?></a></li>
-            <li><a href="#"><?php echo t("") ?></a></li>
-            <li><a href="#"><?php echo t("") ?></a></li>
-            <li><a href="#"><?php echo t("") ?></a></li>
-          </ol>
-        </li>
+        </li>-->
 
       </ul>
     </li>

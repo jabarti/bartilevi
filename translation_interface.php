@@ -12,6 +12,7 @@ require_once "common.inc.php";
 include 'DB_Connection.php';
 $title = 'BartiLevi | Panel tłumaczeń';
 include 'header.php';
+//include 'Translation/translation.css';
 
 //include 'buttons.php';
 //include 'mail.php';

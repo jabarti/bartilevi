@@ -26,35 +26,6 @@ allign: center;
     text-decoration: underline;
 }
 
-div.flag {
-    background-color: silver;
-    position: fixed;
-    bottom:10px;
-    left:10px;
-    padding: 2px;
-    border: 1px solid #263666;
-}
-
-div.transbutton {
-    position: fixed;
-    bottom:60px;
-    left:10px;
-    padding: 2px;
-    border: 1px solid #263666;
-}
-div.transbutton2 {
-    position: fixed;
-    bottom:60px;
-    left:120px;
-    padding: 2px;
-    border: 1px solid #263666;
-}
-
-div.flag a{
-    width: 100px;
-    height: 30px;
-    /*border: 1px solid black;*/
-}
 div#DBConn{
     background: chartreuse;
     width: 220px;
@@ -75,17 +46,6 @@ div#glowny_index {
 	float:right;
         margin-left: auto;
         right: auto;
-	/*color: white;*/
-	}
-div#glowny_index_translation {
-	background: grey/*blue/*black*/;
-        top:450px;
-	width: 1050px; 
-	height: auto;
-	padding: 10px;
-	float:center;
-        margin-left: auto;
-        margin-right: auto;
 	/*color: white;*/
 	}
         
@@ -293,7 +253,7 @@ width: 40%;
         display:none;
         width:100%;
         position:absolute;
-        left:64%;
+        left:68%;
         margin-top:-2em;
         z-index: 99;
       }

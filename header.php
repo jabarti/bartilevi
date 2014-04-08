@@ -14,11 +14,14 @@
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="scripts/jQuery v1.8.3.js"></script>
+        <script type="text/javascript" src="scripts/Popup.js"></script>
         
         <script type="text/javascript" src="scripts/whcookies.js"></script><!---->
         
         <link rel="shortcut icon" href="img/favicon_no_euro.ico" type="image/x-icon"/><!---->
 	<link rel="Stylesheet" type="text/css" href="style.css" />
+        <link rel="Stylesheet" type="text/css" href="Translations/translation.css" />
+        <link rel="Stylesheet" type="text/css" href="Popup.css" />
         <meta charset="utf-8"/>
 
 </head>

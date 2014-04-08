@@ -13,15 +13,44 @@ div#glowny_index {
         margin-left: auto;
         right: auto;
 	/*color: white;*/
-}
+	}
         
+div#glowny_index_translation {
+	background: grey/*blue/*black*/;
+        top:450px;
+	width: 1050px; 
+	height: auto;
+	padding: 10px;
+	float:center;
+        margin-left: auto;
+        margin-right: auto;
+	/*color: white;*/
+	}
+
 div.flag {
     background-color: silver;
     position: fixed;
     bottom:10px;
     left:10px;
     padding: 2px;
-    border: 1px solid #263666;  
+    border: 1px solid #263666;
+}
+#langchoser {
+    /*background-color: #FDD700;*/
+    width: 200px;
+    float: left;
+}
+
+#zawart {
+    /*background-color: chartreuse;*/
+    width: 200px;
+    float: left;
+}
+
+#szukacz {
+    /*background-color: chocolate;*/
+    width: 250px;
+    float: right;
 }
 
 div.transbutton {
@@ -34,7 +63,7 @@ div.transbutton {
 div.transbutton2 {
     position: fixed;
     bottom:60px;
-    left:110px;
+    left:120px;
     padding: 2px;
     border: 1px solid #263666;
 }
@@ -44,4 +73,5 @@ div.flag a{
     height: 30px;
     /*border: 1px solid black;*/
 }
+/*  KONIEC CSS dla /Translations*/
 
