@@ -9,15 +9,19 @@
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
 //echo session_id(); 
-if (isset($_GET['admin']) || isset($_SESSION['admin'])){
-    
-//    echo 'GET: ';var_dump($_GET);
+if (isset($_POST['admin']) || isset($_SESSION['admin'])){
+//echo "<br>".__LINE__;
+//    echo '<br>POST: ';var_dump($_POST);
 //    echo '<br>SESSION: ';var_dump($_SESSION);
-    if (!isset($_SESSION['admin']) || $_GET['admin'] == 'logout' || $_SESSION['admin'] == 'logout')
-        $_SESSION['admin'] = $_GET['admin']; 
     
-    if($_GET['admin'] == 'bartek' || $_SESSION['admin']== 'bartek'){
-               
+    if (!isset($_SESSION['admin']) || isset($_POST['admin'])){
+//echo "<br>".__LINE__;
+        $_SESSION['admin'] = $_POST['admin']; 
+        unset ($_POST['admin']);
+    }
+    
+    if($_SESSION['admin']== 'bartek'){
+//echo "<br>".__LINE__;               
         if($chang == 1){
         ?>
             <div class=transbutton><button onclick="window.history.back()"><?php echo t("Cofnij")?></button><br> 
@@ -30,6 +34,28 @@ if (isset($_GET['admin']) || isset($_SESSION['admin'])){
         <?php
         }
     }
+       if ($_SESSION['admin'] != 'logout'){
+    ?>
+
+    <div class="logbutton">
+        <form action="" method="post">
+            <input type="hidden" name="admin" value="logout"/><br>
+            <input type="submit" value="<?php echo t("Wyloguj");?>"/>
+        </form>    
+    </div>
+    <?php
+
+    }else{
+//        echo "<br>".__LINE__;
+    ?>
+        <div class="logbutton">
+            <form action="" method="post">
+                <input type="text" name="admin"/><br>
+                <input type="submit" value="<?php echo t("Zaloguj");?>"/>
+            </form>    
+        </div>
+    <?php
+}
 }
 
 if(isset($_SESSION['lang'])){

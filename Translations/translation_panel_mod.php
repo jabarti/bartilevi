@@ -10,9 +10,6 @@
 require_once "../common.inc.php";
 include '../DB_Connection.php';
 $title = 'BartiLevi | translation_panel_mod';
-//include '../header.php';
-//include '../flag.php';
-//include '../buttons.php';
 
 if(isset($_GET['tlum'])){
     echo '<br>$_GET[lang]:'.$_GET['lang'];
@@ -24,7 +21,7 @@ if(isset($_GET['tlum'])){
 //    }else{
         $sql = "UPDATE `localization` SET `translation`='".$_GET['translation']."'"
               ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
-//        echo "<br>SQL = ".$sql;
+        echo "<br>SQL = ".$sql;
         
         if(mysql_query($sql)){
             header("Location: ../translation_interface.php");

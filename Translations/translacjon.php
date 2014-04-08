@@ -14,7 +14,7 @@ function t($text){
     $text_long='';
     $text_leng = 100;
 
-    if(strlen($text)>$text_leng){
+    if(strlen($text)>=$text_leng){
 //        echo "<BR>Dł tekstu1: ". strlen($text);
         $text_long = $text;
         $text = substr($text, 0, $text_leng);
@@ -47,7 +47,7 @@ function t($text){
 //        echo $text; 
 //        return $text;
 //        $text .= __FILE__;
-        if(strlen($text_long)<300){
+        if(strlen($text_long)<=$text_leng){
             $sql_ins = "INSERT INTO `localization`(`lang`, `key`, `file`) VALUES ('$lang','$text','$file')";
         } else {
             $sql_ins = "INSERT INTO `localization`(`lang`, `key`, `LongText`, `file`) VALUES ('$lang','$text','$text_long','$file')";
