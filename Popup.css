@@ -21,16 +21,18 @@ and open the template in the editor.
 #toPopup6, 
 #toPopup7 
 {
+    position: fixed;
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #ccc;
     text-align: left;
     display: none;
     font-size: 14px;
-    left: 48.5%;
-    margin-left: -402px;
-    position: fixed;
-    top: 10%;
-    width: 65.5%;
+    left: 300px;
+    /*margin-right: 172px;*/
+    top: 38px;
+    /*width: 960px;*/
+    /*width: 100%;*/
+    width: 66%;
     height: auto;
     z-index: 2;
 }

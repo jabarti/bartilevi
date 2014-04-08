@@ -23,5 +23,4 @@
         <link rel="Stylesheet" type="text/css" href="Translations/translation.css" />
         <link rel="Stylesheet" type="text/css" href="Popup.css" />
         <meta charset="utf-8"/>
-
 </head>

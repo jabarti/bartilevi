@@ -12,7 +12,7 @@
   <ol id="menu">
     <li class="dol"><a href="#"><?php echo t("MENU") ?></a>
       <ul>
-        <li class="prawo"><a href="Documents/CV Bartka 2013.11.14 - inf_PL.pdf" ><?php echo t("Życiorys") ?> PDF</a>
+          <li class="prawo"><a href="Documents/20140408 CV Bartka PL INF.pdf" ><?php echo t("Życiorys") ?> PDF</a>
             <ol>
                 <li><a href="#" class="topopup1" ><?php echo t("Przedstawienie") ?></a>
                             <div id="toPopup1">       
@@ -61,6 +61,7 @@
           <ol>
             <li><a href="http://www.dibuco.co.uk/?page_id=1109" target="blank"><?php echo t("Projekt") ?> Dprint</a></li>
             <li><a href="http://www.bartilevi.pl/Transport_Proj_Zesp/htdocs/"><?php echo t("Projekt") ?> "<?php echo t("Transport")?>"</a></li>
+            <li><a href="http://karypno.nstrefa.pl/projekt_zespolowy_test/index.xhtml" target="blank"><?php echo t("Projekt") ?> "<?php echo t("Spedycja")?>"</a></li>
 <!--            <li><a href="#"><?php echo t("") ?></a></li>
             <li><a href="#"><?php echo t("") ?></a></li>-->
           </ol>

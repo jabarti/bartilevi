@@ -11,12 +11,13 @@ require_once "common.inc.php";
 include 'DB_Connection.php';
 $title = 'BartiLevi | '.t('Strona Główna');
 include 'header.php';
-include 'buttons.php';
-include 'Translations/flag.php';
+//include 'buttons.php';
+//include 'Translations/flag.php';
+include 'Menu.php';
 ?>
 <body>
 <?php
-include 'Menu.php';
+
 ?>
     <div id="glowny_index" >
          <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php echo t("STRONA W BUDOWIE")?> v (<?php echo t("NA BUDOWIE")?>??? :)</h4>
@@ -43,7 +44,7 @@ include 'Menu.php';
             <p><?php echo t("nowy");?></p>
         </div>-->
 <!--        <div id="glowny_wew"><img src="img/NSZ I.jpg" alt="No Picture available" style="position: relative;height: 200px;"/>
-            <p><?php echo t("Cogito ergo sum");?> :) </p>
+            <p><?php echo t("I stała się światłość");?> :) </p>
         </div>-->
 <!--        <div id="glowny_wew"><img src="img/NSZ II.jpeg" alt="No Picture available" style="position: relative;height: 200px;"/>
             <p><?php echo "Cogito ergo sum :"?> :)</p>
@@ -60,4 +61,7 @@ include 'Menu.php';
         </div>-->
     </div>
 <?php
+include 'buttons.php';
+include 'Translations/flag.php';
+//include 'Menu.php';
 require_once 'footer.php';

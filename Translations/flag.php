@@ -20,7 +20,7 @@ if (isset($_POST['admin']) || isset($_SESSION['admin'])){
         unset ($_POST['admin']);
     }
     
-    if($_SESSION['admin']== 'bartek'){
+    if($_SESSION['admin']== 'bartek887'){
 //echo "<br>".__LINE__;               
         if($chang == 1){
         ?>
@@ -48,16 +48,24 @@ if (isset($_POST['admin']) || isset($_SESSION['admin'])){
     }else{
 //        echo "<br>".__LINE__;
     ?>
-        <div class="logbutton">
+        <div class="logbutton2">
             <form action="" method="post">
-                <input type="text" name="admin"/><br>
+                <input type="password" name="admin"/><br>
                 <input type="submit" value="<?php echo t("Zaloguj");?>"/>
             </form>    
         </div>
     <?php
 }
+} else {
+    ?>
+        <div class="logbutton2">
+            <form action="" method="post">
+                <input type="password" name="admin"/><br>
+                <input type="submit" value="<?php echo t("Zaloguj");?>"/>
+            </form>    
+        </div>
+    <?php
 }
-
 if(isset($_SESSION['lang'])){
     switch ($_SESSION['lang']){
         case 'pl':

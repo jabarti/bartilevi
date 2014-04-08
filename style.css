@@ -1,8 +1,36 @@
 ﻿body
 {
 background-color:#d0e4fe;
-width: 84%;
-allign: center;
+width: 87%;
+/*allign: center;*/
+}
+
+div#glowny_index {
+/*position: relative;*/
+background: grey/*blue/*black*/;
+top: 110px;
+width: 100%; 
+height: auto;
+/*padding: 10px;*/
+/*float:right;*/
+margin-left: auto;
+margin-right: auto;
+/*color: white;*/
+}
+
+div#glowny_wew {
+background: lightcyan;
+width: 50%; 
+height: 400px;
+margin-left: auto;
+margin-right: auto;
+-moz-box-shadow: 0px 0px 6px #88a;
+-webkit-box-shadow: 0px 0px 6px #88a;
+box-shadow: 0px 0px 6px #88a; 
+padding: 0px;
+float: left;
+display: block;
+/*color: white;*/
 }
 
 #maildiv {
@@ -25,7 +53,7 @@ allign: center;
     font-weight: bold;
     text-decoration: underline;
 }
-
+/* Specific css for css div with info about connection*/
 div#DBConn{
     background: chartreuse;
     width: 220px;
@@ -35,57 +63,31 @@ div#DBConn{
     position:fixed;
     top:60px;
     left:5px;
-    
 }
-div#glowny_index {
-	background: grey/*blue/*black*/;
-        top:450px;
-	width: 880px; 
-	height: auto;
-	padding: 10px;
-	float:right;
-        margin-left: auto;
-        right: auto;
-	/*color: white;*/
-	}
         
-div#glowny_wew {
-	background: lightcyan;
-	width: 50%; 
-	height: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	-moz-box-shadow: 0px 0px 6px #88a;
-	-webkit-box-shadow: 0px 0px 6px #88a;
-	box-shadow: 0px 0px 6px #88a; 
-	padding: 0px;
-	float: left;
-        display: block;
-	/*color: white;*/
-}
-
 div.cleaner {
 clear: both;
 }
 
-p.red {
+p.red, span.red{
 color:red;
 }
-p.blue {
+
+p.blue, span.blue {
 color:blue;
 }
+
 p.green {
 color:green;
 }
 
-
 div.guziki {
 position:fixed;
-top:30px;
+top:23px;
 right:5px;
 background: whitesmoke;
-width:180px;
-padding:5px;
+width:11.4%;
+padding:2px;
 border:2px solid black;
 }
 
@@ -96,56 +98,58 @@ height: auto;
 border: 2px solid grey;
 }
 
-div .wisp1 {
+/*div .wisp1 {
 float: left;
 width: 40%;
 }
+*/
 
-
-    .myButton {
+.myButton {
         
-        -moz-box-shadow: 4px 3px 0px 0px #284470;
-        -webkit-box-shadow: 4px 3px 0px 0px #284470;
-        box-shadow: 4px 3px 0px 0px #284470;
+-moz-box-shadow: 4px 3px 0px 0px #284470;
+-webkit-box-shadow: 4px 3px 0px 0px #284470;
+box-shadow: 4px 3px 0px 0px #284470;
         
-        background-color:#415989;
-        /*background-color:#D0E4FE;*/
+background-color:#415989;
+/*background-color:#D0E4FE;*/
         
-        -moz-border-radius:18px;
-        -webkit-border-radius:18px;
-        border-radius:18px;
+-moz-border-radius:12px;
+-webkit-border-radius:12px;
+border-radius:12px;
         
-        border:1px solid #1f2f47;
+border:1px solid #1f2f47;
         
-        display:inline-block;
-        color:#ffffff;
-        /*color:#000000;*/
-        font-family:arial;
-        font-size:13px;
-        font-weight:normal;
-        padding:10px 25px;
-        text-decoration:none;
+display:inline-block;
+color:#ffffff;
+/*color:#000000;*/
+font-family:arial;
+font-size:11px;
+font-weight:normal;
+padding:7px 15px;
+text-decoration:none;
         
-        text-shadow:0px 3px 0px #263666;
+text-shadow:0px 3px 0px #263666;
         
-    }
-    .myButton:hover {
-        
-        background-color:#516ca3;
-    }
-    .myButton:active {
-        position:relative;
-        top:1px;
-    }
+}
+.myButton:hover {
+     background-color:#516ca3;
+}
+.myButton:active {
+     position:relative;
+     top:1px;
+}
 	/**/
         
 #footer {
+        position: relative;
+        bottom: 0px;
 	background: blueviolet;
         /*background: url(backgrounds/menu.png) no-repeat center center fixed;*/
-	margin-left: 21%;
-	margin-right: auto;
+        text-align: right;
+	margin-left: auto;
+	/*margin-right: auto;*/
 	width: auto;
-	font-weight: bold;
+	/*font-weight: bold;*/
         
 	/*position: relative; height: 170px;*/
 }
@@ -154,7 +158,7 @@ width: 40%;
  
       /* ------------------------CZĘŚĆ-GÓRNA-MENU------------------------ */
 
-      /* usunięcie domyślnych właściwości CSS z elementów - ol - oraz - ul */
+      /* usunięcie domyślnych właściwości CSS z elementów - ol - oraz - ul */     
       #menu, #menu ul, #menu ol {
         list-style-type:none;       // To usuwa domyślne numerki przy liście
         padding:0;
@@ -163,6 +167,8 @@ width: 40%;
 
       /* wygląd głównego elementu - ol */
       #menu {
+        position: relative;
+        top: -20px; 
         /*background-color:#FFF;*/
         background-color:#415989;
         font-size:12px;
@@ -182,7 +188,7 @@ width: 40%;
       /* wygląd elementów - li - wszystkich dzieci elementu - ol */
       #menu > li {
         float:left;
-        width:120px;
+        width:140px;
         margin-left:1px;
         background-color:#FDD700;
         background-color: whitesmoke;
@@ -213,7 +219,7 @@ width: 40%;
       /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
       #menu > li:hover > ul {
         display:block;
-        width:120px;
+        width:140px;
         position: relative;
         left: -40px;
       }
@@ -253,7 +259,7 @@ width: 40%;
         display:none;
         width:100%;
         position:absolute;
-        left:68%;
+        left:73%;
         margin-top:-2em;
         z-index: 99;
       }
@@ -291,12 +297,12 @@ width: 40%;
       #menu .dol {
         background-image:url('img/down.png');
         background-repeat:no-repeat;
-        background-position:98% center;
+        background-position:100% center;
       }
 
       /* strzałka w dół */
       #menu .prawo {
         background-image:url('img/right.png');
         background-repeat:no-repeat;
-        background-position:98% center;
+        background-position:101% center;
       }
