@@ -11,14 +11,12 @@ require_once "common.inc.php";
 include 'DB_Connection.php';
 $title = 'BartiLevi | '.t('Strona Główna');
 include 'header.php';
+
 //include 'buttons.php';
 //include 'Translations/flag.php';
 include 'Menu.php';
 ?>
 <body>
-<?php
-
-?>
     <div id="glowny_index" >
          <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php echo t("STRONA W BUDOWIE")?> v (<?php echo t("NA BUDOWIE")?>??? :)</h4>
         <div id="glowny_wew" style="column-count: 2; -moz-column-count: 2; -webkit-column-count: 2">
@@ -30,27 +28,31 @@ include 'Menu.php';
             </div>
         </div>
 <!--        <div id="glowny_wew">
-                <p><?php echo t("Cogito ergo sumq");?></p>
-                <p><?php echo t("Cogito ergo sum");?></p>
-                <p><?php echo t("Cogito ergo sumq");?></p>
-                <p><?php echo t("Cogito ergo sum");?></p>
-                <p><?php echo t('Wersja');?></p>
-                <p><?php echo t('Dupa');?></p>
+                <p><?php //echo t("Cogito ergo sum");?></p>
         </div>-->
         <div id="glowny_wew">
             <?php include 'mail.php'; ?>
         </div>
-<!--        <div id="glowny_wew"><img src="img/no_euro.png" alt="No Picture available" style="height: 200px;"/>
-            <p><?php echo t("nowy");?></p>
+<!--        <div id="glowny_wew">
+            <img src="img/no_euro.png" alt="No Picture available" style="height: 200px;"/>
+            <p id="brows"></p>
+            <p><?php 
+            
+                echo 'PLATFORM: '.$_SESSION['platform'].", BROWSER: ".$_SESSION['browser'];
+                
+                echo '<br>SCREEN: '.$_SESSION['screenWidth']." / ".$_SESSION['screenHeight'];
+
+
+                        ?></p>
         </div>-->
 <!--        <div id="glowny_wew"><img src="img/NSZ I.jpg" alt="No Picture available" style="position: relative;height: 200px;"/>
-            <p><?php echo t("I stała się światłość");?> :) </p>
+            <p><?php //echo t("I stała się światłość");?> :) </p>
         </div>-->
 <!--        <div id="glowny_wew"><img src="img/NSZ II.jpeg" alt="No Picture available" style="position: relative;height: 200px;"/>
-            <p><?php echo "Cogito ergo sum :"?> :)</p>
+            <p><?php //echo "Cogito ergo sum :"?> :)</p>
         </div>-->
 <!--        <div id="glowny_wew"><img src="img/jedenpierdol.jpg" alt="No Picture available" style="position: relative;height: 200px;"/>
-            <p><?php echo t("Cogito ergo sum");?> :)</p>
+            <p><?php //echo t("Cogito ergo sum");?> :)</p>
         </div>-->
 <!--        <div id="glowny_wew">
             <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
@@ -61,7 +63,8 @@ include 'Menu.php';
         </div>-->
     </div>
 <?php
+include 'footer.php';
 include 'buttons.php';
 include 'Translations/flag.php';
 //include 'Menu.php';
-require_once 'footer.php';
+

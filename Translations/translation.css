@@ -3,38 +3,81 @@
     Created on : 2014-04-03, 21:38:21
     Author     : Bartek M. Lewiński
 */
-div#glowny_index {
-	background: grey/*blue/*black*/;
-        top:450px;
-	width: 880px; 
-	height: auto;
-	padding: 10px;
-	float:right;
-        margin-left: auto;
-        right: auto;
-	/*color: white;*/
-	}
+
         
 div#glowny_index_translation {
 	background: grey/*blue/*black*/;
         top:450px;
-	width: 1050px; 
+	width: 1010px; 
 	height: auto;
 	padding: 10px;
-	float:center;
-        margin-left: auto;
+	float:left;
+        margin-left: 10%;
         margin-right: auto;
 	/*color: white;*/
 	}
+        
+div#translacje {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    width: 11.4%;
+    /*background-clip: red;*/     
+    /*border: 1px solid black;*/
+    margin-left: auto;
+    margin-left: auto;
+    text-align: left;
+}
+
+div.logbutton2 {
+    position: relative;
+    top:10px;
+    right:0px;
+    padding: 2px 0 2px 0;
+    text-align: left;
+    /*border: 1px solid #263666;*/
+}
 
 div.flag {
-    background-color: silver;
-    position: fixed;
-    bottom:130px;
-    right:38px;
-    padding: 2px;
+    position: relative;
+    top: -90px;
+    right:-1px;
+    /*background-color: silver;*/
+    /*padding: 2px;*/
+    /*border: 1px solid #263666;*/
+}
+
+div.flag a{
+    width: 100px;
+    /*height: 25px;*/
+    /*border: 1px solid black;*/
+}
+
+div.logbutton {
+    position: relative;
+    top:10px;
+    right:0px;
+    padding: 2px 0 2px 0;
+    text-align: left;
+    /*border: 1px solid #263666;*/
+}
+
+div.transbutton {
+    position: relative;
+    top:-50px;
+    right:0px;
+/*    width: 92px;
+    padding: 2px;*/
+    /*border: 1px solid #263666;*/
+}
+div.transbutton2 {
+    position: relative;
+    top:60px;
+    right:0px;
+    padding: 2px 0 2px 0;
     border: 1px solid #263666;
 }
+
 #langchoser {
     /*background-color: #FDD700;*/
     width: 200px;
@@ -52,41 +95,9 @@ div.flag {
     width: 250px;
     float: right;
 }
-
-div.logbutton {
-    position: fixed;
-    bottom:60px;
-    right:85px;
-    padding: 2px;
-    /*border: 1px solid #263666;*/
-}
-div.logbutton2 {
-    position: fixed;
-    bottom:60px;
-    right:10px;
-    padding: 2px;
-    /*border: 1px solid #263666;*/
-}
-
-div.transbutton {
-    position: fixed;
-    bottom:170px;
-    right:56px;
-    padding: 2px;
-    border: 1px solid #263666;
-}
-div.transbutton2 {
-    position: fixed;
-    bottom:60px;
-    left:120px;
-    padding: 2px;
-    border: 1px solid #263666;
-}
-
-div.flag a{
-    width: 100px;
-    height: 30px;
-    /*border: 1px solid black;*/
-}
 /*  KONIEC CSS dla /Translations*/
 
+.th1 {
+    width: 35px;
+    font-size: 13px;
+}

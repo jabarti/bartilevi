@@ -82,3 +82,61 @@ if (isset($_GET['lang'])||isset($_SESSION['lang'])){
 //echo "<br>LANG = ".$_SESSION['lang'];
 //echo "<br>MAIL = ".$_SESSION['user_mail'].'<br>';
 
+//            echo $_SERVER['HTTP_USER_AGENT'];
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'iPad'))
+//                    echo '<br>platform=iPad';
+                    $_SESSION['platform'] = 'iPad';
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Windows'))
+//                    echo '<br>platform=Windows';
+                    $_SESSION['platform'] = 'Windows';
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Linux'))
+//                    echo '<br>platform=Linux';
+                    $_SESSION['platform'] = 'Linux';
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Android'))
+//                    echo '<br>platform=Android';
+                    $_SESSION['platform'] = 'Android';
+            
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Firefox'))
+//                    echo ', browser=Firefox';
+                    $_SESSION['browser'] = 'Firefox';
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Chrome'))
+//                    echo ', browser=Chrome';
+                $_SESSION['browser'] = 'Chrome';
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Safari'))
+//                    echo ', browser=Safari';
+                $_SESSION['browser'] = 'Safari';
+            if (strpos($_SERVER['HTTP_USER_AGENT'],'Mozilla'))
+//                    echo ', browser=Mozilla';
+                $_SESSION['browser'] = 'Mozilla';
+?>
+<script type="text/javascript" src="scripts/jQuery v1.8.3.js"></script>
+<script language="JavaScript">
+var screenWidth = window.screen.width;
+var screenHeight = window.screen.height;
+
+$.ajax ({
+    'type': 'POST',  
+            'url':  'common.inc.php',
+            'data':{
+                
+                            'action':           'try',
+                            'screenWidth':      screenWidth,
+                            'screenHeight':     screenHeight
+                },  
+                success: function(data) {
+                    if( data == '0' ){
+                        alert ('ERROR');
+                   }else{
+//                        alert ("OK: "+screenWidth+" / "+screenWidth);
+                        $('#brows').html('Ala ma kotka');
+                   }
+                   
+                }  
+});
+</script>
+<?php
+if (isset($_POST['screenWidth']) && isset($_POST['screenHeight'])){
+            $_SESSION['screenWidth'] = $_POST['screenWidth'];
+            $_SESSION['screenHeight'] = $_POST['screenHeight'];
+}
+

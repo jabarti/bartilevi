@@ -8,6 +8,9 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
+?>
+  <div id=translacje>
+<?php
 //echo session_id(); 
 if (isset($_POST['admin']) || isset($_SESSION['admin'])){
 //echo "<br>".__LINE__;
@@ -48,9 +51,10 @@ if (isset($_POST['admin']) || isset($_SESSION['admin'])){
     }else{
 //        echo "<br>".__LINE__;
     ?>
+            <div class="cleaner"></div>
         <div class="logbutton2">
             <form action="" method="post">
-                <input type="password" name="admin"/><br>
+                <input type="password" size=10 name="admin"/><br>
                 <input type="submit" value="<?php echo t("Zaloguj");?>"/>
             </form>    
         </div>
@@ -115,3 +119,5 @@ if(isset($_SESSION['lang'])){
             </div>
             <?php
 }
+?>
+  </div>

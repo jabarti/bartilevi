@@ -71,7 +71,7 @@ $res = mysql_query($sql);
 
 <table>
     <tr>
-        <th><?php echo t("język"); ?></th>
+        <th class="th1"><?php echo t("język"); ?></th>
         <th></th>
         <th><?php echo t("tekst klucz"); ?></th>
         <th><?php echo t("tłumaczenie"); ?></th>
@@ -81,7 +81,7 @@ $res = mysql_query($sql);
     <?php while($row = mysql_fetch_array($res)){ ?>
     <tr>
     <form action="Translations/translation_panel_mod.php" method="get">
-            <td><input type="text" size="1" name="lang" value="<?php echo $row[0]; ?>" readonly="readonly"></td>
+            <td><input type="text" size="3" name="lang" value="<?php echo $row[0]; ?>" readonly="readonly"></td>
             <?php if( $row[2] == '') { ?>
                 <td><input type="hidden" name="LongText" value="<?php echo $row[2]; ?>" readonly="readonly"></td>
                 <td><input type="text" size=45% name="key" value="<?php echo $row[1]; ?>" readonly="readonly"></td>
