@@ -98,7 +98,7 @@
       </ul>
     </li>
     <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'bartek887'){ ?>
-     II menubar 
+
     <li class="dol"><a href="#"><?php echo t("Ciekawe linki") ?></a>
       <ul>
         <li class="prawo"><a href="#"><?php echo t("Informatyka") ?></a>

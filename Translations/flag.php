@@ -24,13 +24,15 @@ if (isset($_POST['admin']) || isset($_SESSION['admin'])){
     }
     
     if($_SESSION['admin']== 'bartek887'){
-//echo "<br>".__LINE__;               
-        if($chang == 1){
+        
+//echo "<div id=komunikatte><br>".__LINE__.$_SESSION['admin'];               
+//echo "<br>".__LINE__.$_SESSION['chang']."</div>";               
+        if($_SESSION['chang'] == 1){
         ?>
             <div class=transbutton><button onclick="window.history.back()"><?php echo t("Cofnij")?></button><br> 
-            <button onclick="window.location.href='../index.php'"><?php echo t("Powrót do")?> index</button></div> 
+            <button onclick="window.location.href='index.php'"><?php echo t("Powrót do")?> index</button></div> 
         <?php
-            $chang = 0;
+            $_SESSION['chang'] = 0;
         }else{
         ?>
             <div class=transbutton><button onclick="location.href='translation_interface.php'"><?php echo t("Translacje")?></button></div> 

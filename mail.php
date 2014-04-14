@@ -18,6 +18,8 @@ if (isset($_GET['send'])){
         $send = 0;
     else
         $send = -1;
+} else {
+    $send = -2;
 }
 /* it stores info about user mail */
 if (isset($_SESSION['user_mail'])){

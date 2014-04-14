@@ -32,6 +32,11 @@ margin-left: auto;
 margin-right: auto;
 color: white;
 }*/
+#komunikatte{
+    position: fixed;
+    top: 100px;
+    left: 0px;
+}
 
 div#glowny_wew {
 background: lightcyan;

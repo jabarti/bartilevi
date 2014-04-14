@@ -20,7 +20,7 @@ include 'header.php';
 <body style="width:100%;">
     <div id="glowny_index_translation" >
         <?php
-            $chang = 1;
+            $_SESSION['chang'] = 1;
             include 'Translations/translation_panel.php';
         ?>
     </div>
