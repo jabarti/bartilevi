@@ -23,7 +23,7 @@ if (isset($_POST['admin']) || isset($_SESSION['admin'])){
         unset ($_POST['admin']);
     }
     
-    if($_SESSION['admin']== 'bartek887'){
+    if($_SESSION['admin']== $tempass){
         
 //echo "<div id=komunikatte><br>".__LINE__.$_SESSION['admin'];               
 //echo "<br>".__LINE__.$_SESSION['chang']."</div>";               
