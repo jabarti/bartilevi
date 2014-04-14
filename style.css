@@ -2,14 +2,17 @@
 {
 background-color:#d0e4fe;
 width: 87%;
+height: 100%;
 /*allign: center;*/
 }
 div#glowny_index {
     position: absolute;
 	background: grey/*blue/*black*/;
-        top:13px;
+        /*top:13px;*/
+        top:2%;
         right: 12.5%;
 	width: 880px; 
+        width: 64%; 
 	height: auto;
 	padding: 10px;
 	float:right;
@@ -96,7 +99,8 @@ color:green;
 
 div.guziki {
 position:fixed;
-top:13px;
+/*top:13px;*/
+top:2%;
 right:5px;
 background: whitesmoke;
 width:11.4%;
@@ -104,7 +108,7 @@ padding:2px;
 border:2px solid black;
 }
 
-div .box {
+div.box {
 float: left;
 width: 15%;
 height: auto;
@@ -157,6 +161,7 @@ div#footer p{
         position: relative;
         bottom: -950px; /* 2 rows*/
         bottom: -500px;  /*1 row*/
+        /*bottom: 100%;*/
 	background: blueviolet;
         /*background: url(backgrounds/menu.png) no-repeat center center fixed;*/
         text-align: right;
@@ -182,7 +187,7 @@ div#footer p{
       /* wygląd głównego elementu - ol */
       #menu {
         position: fixed;
-        top: 13px; 
+        top: 2%; 
         /*top: 0px;*/ 
         /*background-color:#FFF;*/
         background-color:#415989;
@@ -190,6 +195,7 @@ div#footer p{
         height:2.3em;
         line-height:2em;
         text-align:center;
+        width: auto;
       }
 
       /* wygląd wszystkich elementów - a - znajdujących się w elemencie - ol */
@@ -203,8 +209,10 @@ div#footer p{
       /* wygląd elementów - li - wszystkich dzieci elementu - ol */
       #menu > li {
         float:left;
-        width:140px;
-        margin-left:1px;
+        width:135px;
+        /*width:202%;*/
+        /*width:100%;*/
+        margin-left:0px;
         background-color:#FDD700;
         background-color: whitesmoke;
         height:2em; 
@@ -236,7 +244,8 @@ div#footer p{
       /* tło do menu II level */
       #menu > li:hover > ul {
         display:block;
-        width:140px;
+        /*width:135px;*/
+        width:100%;
         position: relative;
         left: -40px;
         /*background-color: red;*/
@@ -279,7 +288,7 @@ div#footer p{
         display:none;
         width:102%;
         position:absolute;
-        left:73%;
+        left:70%;
         margin-top:-2em;
         z-index: 99;
         /*background-color: red;*/

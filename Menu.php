@@ -97,22 +97,25 @@
 
       </ul>
     </li>
-<!--     II menubar  
-    <li class="dol"><a href="#">dział - 2</a>
+    <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'bartek887'){ ?>
+     II menubar 
+    <li class="dol"><a href="#"><?php echo t("Ciekawe linki") ?></a>
       <ul>
-        <li><a href="#">link - 1</a></li>
-
-        <li class="prawo"><a href="#">link - 2</a>
+        <li class="prawo"><a href="#"><?php echo t("Informatyka") ?></a>
           <ol>
-            <li><a href="#">dodany - 1</a></li>
-            <li><a href="#">dodany - 2</a></li>
-            <li><a href="#">dodany - 3</a></li>
-            <li><a href="#">dodany - 4</a></li>
-            <li><a href="#">dodany - 5</a></li>
+            <li><a href="https://github.com/jabarti" target="blank"><?php echo t("Repozytorium Github") ?></a></li>
+            <li><a href="http://www.linkedin.com/reg/join-pprofile?_ed=0_6yeLOMDeQaSDwBOxOV1WAeDBtnIiOJxUrOjmtmwtOdQHofbVm2Y-mf9zhkbvzZaNcotDLWdvXDExCJE1RJyYpwHCCfas7ZNuUUeTMpRe2_7&trk=ndir_viewmore" target="blank"><?php echo t("Mój") ?> Linkedin</a></li>
           </ol>
-        </li>
+        </li><!---->
+        <li class="prawo"><a href="#"><?php echo t("Kościół") ?></a>
+          <ol>
+            <li><a href="http://www.emaus.czest.pl/" target="blank"><?php echo t("Wspólnota")?> Emaus</a></li>
+            <li><a href="http://www.langustanapalmie.pl/" target="blank"><?php echo t("Langusta na palmie")?></a></li>
+          </ol>
+        </li><!---->
 
-        <li><a href="#">link - 3</a></li>
-      </ul>
-    </li>-->
+        <!--<li><a href="#">link - 3</a></li>-->
+      </ul><!---->
+    </li><!---->
+    <?php } ?>
   </ol>

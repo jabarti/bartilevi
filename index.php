@@ -37,14 +37,10 @@ include 'Menu.php';
             <img src="img/no_euro.png" alt="No Picture available" style="height: 200px;"/>
             <p id="brows"></p>
             <p><?php 
-            
-                echo 'PLATFORM: '.$_SESSION['platform'].", BROWSER: ".$_SESSION['browser'];
-                
+                echo 'PLATFORM: '.$_SESSION['platform'].", BROWSER: ".$_SESSION['browser'];        
                 echo '<br>SCREEN: '.$_SESSION['screenWidth']." / ".$_SESSION['screenHeight'];
-
-
-                        ?></p>
-        </div>-->
+               ?></p>
+       </div>-->
 <!--        <div id="glowny_wew"><img src="img/NSZ I.jpg" alt="No Picture available" style="position: relative;height: 200px;"/>
             <p><?php //echo t("I stała się światłość");?> :) </p>
         </div>-->
