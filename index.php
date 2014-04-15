@@ -15,6 +15,7 @@ include 'header.php';
 //include 'buttons.php';
 //include 'Translations/flag.php';
 include 'Menu.php';
+include 'Log_panel.php';
 ?>
 <body>
     <div id="glowny_index" >

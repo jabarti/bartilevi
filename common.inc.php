@@ -157,4 +157,7 @@ include "login.php";
 //foreach ($_SESSION as $k => $v){
 //    echo "SESS[".$k."] => ".$v."<br>";
 //}
+//foreach ($_POST as $k => $v){
+//    echo "POST[".$k."] => ".$v."<br>";
+//}
 //echo "</div>";
