@@ -140,3 +140,21 @@ if (isset($_POST['screenWidth']) && isset($_POST['screenHeight'])){
             $_SESSION['screenHeight'] = $_POST['screenHeight'];
 }
 
+
+include "login.php";
+
+
+// TEST AREA!!!!
+//echo "<div id=komunikatte>";
+//
+//if (isset($_SESSION['admin']) && $_SESSION['admin'] == 'OK'){
+//    echo "SESS admin OK<br>";
+//}else{
+//    echo "SESS admin NO<br>";
+//}
+//
+//
+//foreach ($_SESSION as $k => $v){
+//    echo "SESS[".$k."] => ".$v."<br>";
+//}
+//echo "</div>";

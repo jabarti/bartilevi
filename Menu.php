@@ -97,7 +97,7 @@
 
       </ul>
     </li>
-    <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == $tempass){ ?>
+    <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == 'OK'){ ?>
 
     <li class="dol"><a href="#"><?php echo t("Ciekawe linki") ?></a>
       <ul>
