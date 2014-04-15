@@ -11,11 +11,11 @@
 	<meta http-equiv="Content-Language" content="PL" />
 	<meta http-equiv="refresh" content="660"/>  <!-- Odświeżanie co 11 minut = 660sek-->
         
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<!--	<script type="text/javascript" src="scripts/jQuery v1.8.3.js"></script>-->
+<!--	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+	<script type="text/javascript" src="scripts/jQuery v1.8.3.js"></script>
         <script type="text/javascript" src="scripts/Popup.js"></script>
-        <!--<script type="text/javascript" src="scripts/try1.js"></script>-->
+        <script type="text/javascript" src="scripts/jQuery_BL.js"></script>
         
         <script type="text/javascript" src="scripts/userAgent.js"></script><!---->
         

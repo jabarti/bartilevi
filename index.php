@@ -11,18 +11,19 @@ require_once "common.inc.php";
 include 'DB_Connection.php';
 $title = 'BartiLevi | '.t('Strona Główna');
 include 'header.php';
-
-//include 'buttons.php';
-//include 'Translations/flag.php';
 include 'Menu.php';
 include 'Log_panel.php';
+include 'buttons.php';
+include 'Translations/flag.php';
 ?>
 <body>
     <div id="glowny_index" >
          <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php echo t("STRONA W BUDOWIE")?> v (<?php echo t("NA BUDOWIE")?>??? :)</h4>
-        <div id="glowny_wew" style="column-count: 2; -moz-column-count: 2; -webkit-column-count: 2">
+        <!--<div id="glowny_wew" style="column-count: 2; -moz-column-count: 2; -webkit-column-count: 2">-->
+        <div id="glowny_wew" style="">
             <!--<div><table style="background-image:url('img/Barti_dyplomII.JPG');width: 265px; height:350px"><tr><td></td></tr></table></div>-->
-            <img src="img/Barti_dyplomII.JPG" alt="No Picture available" style="position: relative; height: 200px;"/>
+            <!--<img src="img/Barti_dyplomII.JPG" alt="No Picture available" style="position: relative; height: 200px;"/>-->
+            <img id="ZDJ_01" src="img/Barti_dyplomII thumb.jpg" alt="No Picture available" style="float:left; margin:6px"/>
             <div>
                 <p><?php echo t("Ego sum"); ?> :)</p>
                 <p><?php include 'text1.php'; ?> :)</p>
@@ -61,7 +62,7 @@ include 'Log_panel.php';
     </div>
 <?php
 include 'footer.php';
-include 'buttons.php';
-include 'Translations/flag.php';
+//include 'buttons.php';
+//include 'Translations/flag.php';
 //include 'Menu.php';
 

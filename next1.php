@@ -8,12 +8,15 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
-include 'common.inc.php';
+require_once "common.inc.php";
 include 'DB_Connection.php';
-$title = 'BartiLevi | phpinfo()';
+$title = 'BartiLevi | '.t('next1');
 include 'header.php';
-include 'flag.php';
+//include 'Menu.php';
+//include 'Log_panel.php';
 include 'buttons.php';
-include 'Translations/flag.php';
+//include 'Translations/flag.php';
+
+
 phpinfo();
 ?>
