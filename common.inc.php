@@ -20,19 +20,7 @@ if(!isset($ref)){
 
 header('Content-Type: text/html; charset=utf-8'); 
 
-// DEFINE DIRECTORIES
-define('BASE_PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
-define('ROOT', dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR); 
-//define('INCLUDE_PATH', substr(BASE_PATH, 0, strrpos(BASE_PATH, DIRECTORY_SEPARATOR)) . DIRECTORY_SEPARATOR . 'Includes');
-define('CLASSES_PATH', BASE_PATH .'Classes'.DIRECTORY_SEPARATOR);
-define('TRANSLATION_PATH', BASE_PATH .'Translations'.DIRECTORY_SEPARATOR);
-//define('LOCALE_PATH', INCLUDE_PATH . DIRECTORY_SEPARATOR . 'locale'.DIRECTORY_SEPARATOR);
-//define('FILES_PATH', substr(BASE_PATH, 0, strrpos(BASE_PATH, DIRECTORY_SEPARATOR)) . DIRECTORY_SEPARATOR . 'files'.DIRECTORY_SEPARATOR);
-define('IMG_PATH', BASE_PATH .'img'.DIRECTORY_SEPARATOR);
-define('CSS_PATH', BASE_PATH .'css'.DIRECTORY_SEPARATOR);
-define('DOC_PATH', BASE_PATH .'Documents'.DIRECTORY_SEPARATOR);
-define('CV_PATH', DOC_PATH .'CV interactive'.DIRECTORY_SEPARATOR);
-define('SCRIPT_PATH', BASE_PATH .'scripts'.DIRECTORY_SEPARATOR);
+require 'Paths.php';
 
 mysql_query('SET NAMES utf8');
 
@@ -45,26 +33,26 @@ if (isset($_GET['lang'])||isset($_SESSION['lang'])){
     $_SESSION['lang'] = "pl";
 }
 
-    include TRANSLATION_PATH.'translacjon.php';
+include TRANSLATION_PATH.'translacjon.php';
 
 //            echo $_SERVER['HTTP_USER_AGENT'];
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'iPad'))
-                    $_SESSION['platform'] = 'iPad';
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Windows'))
-                    $_SESSION['platform'] = 'Windows';
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Linux'))
-                    $_SESSION['platform'] = 'Linux';
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Android'))
-                    $_SESSION['platform'] = 'Android';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'iPad'))
+        $_SESSION['platform'] = 'iPad';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Windows'))
+        $_SESSION['platform'] = 'Windows';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Linux'))
+        $_SESSION['platform'] = 'Linux';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Android'))
+        $_SESSION['platform'] = 'Android';
             
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Firefox'))
-                    $_SESSION['browser'] = 'Firefox';
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Chrome'))
-                    $_SESSION['browser'] = 'Chrome';
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Safari'))
-                    $_SESSION['browser'] = 'Safari';
-            if (strpos($_SERVER['HTTP_USER_AGENT'],'Mozilla'))
-                    $_SESSION['browser'] = 'Mozilla';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Firefox'))
+        $_SESSION['browser'] = 'Firefox';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Chrome'))
+        $_SESSION['browser'] = 'Chrome';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Safari'))
+        $_SESSION['browser'] = 'Safari';
+if (strpos($_SERVER['HTTP_USER_AGENT'],'Mozilla'))
+        $_SESSION['browser'] = 'Mozilla';
 ?>
 <script type="text/javascript" src="scripts/jQuery v1.8.3.js"></script>
 <script language="JavaScript">
