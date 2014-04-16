@@ -16,19 +16,10 @@
 	<script type="text/javascript" src="scripts/jQuery v1.8.3.js"></script>
         <script type="text/javascript" src="scripts/Popup.js"></script>
         <script type="text/javascript" src="scripts/jQuery_BL.js"></script>
-        <!--<script type="text/javascript" src="scripts/newjavascript.js"></script>-->
-        <script type="text/javascript" src="<?php echo SCRIPT_PATH.'newjavascript.js';?>"></script>
-        <?php echo '<br><br><br>'.SCRIPT_PATH.'newjavascript.js';?>
         <script type="text/javascript" src="scripts/userAgent.js"></script><!---->
         
-
-<!--        <script type="text/javascript">
-           window.onbeforeload = load();
-                //run js code here
-        </script>-->
-
-        
         <link rel="shortcut icon" href="img/favicon_no_euro.ico" type="image/x-icon"/><!---->
+        
 	<link rel="Stylesheet" type="text/css" href="style.css" />
         <link rel="Stylesheet" type="text/css" href="Translations/translation.css" />
         <link rel="Stylesheet" type="text/css" href="Popup.css" />
