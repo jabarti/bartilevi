@@ -19,7 +19,7 @@
         
         <link rel="shortcut icon" href="../img/favicon_no_euro.ico" type="image/x-icon"/><!---->
         
-	<link rel="Stylesheet" type="text/css" href="../style.css" />
+	<link rel="Stylesheet" type="text/css" href="../css/style.css" />
 	<!--<link rel="Stylesheet" type="text/css" href="translation.css" />-->
         <meta charset="utf-8"/>
 

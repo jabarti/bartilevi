@@ -370,14 +370,14 @@ div#footer p{
 
       /* strzałka w prawo */
       #menu .dol {
-        background-image:url('img/down.png');
+        background-image:url('../img/down.png');
         background-repeat:no-repeat;
         background-position:100% center;
       }
 
       /* strzałka w dół */
       #menu .prawo {
-        background-image:url('img/right.png');
+        background-image:url('../img/right.png');
         background-repeat:no-repeat;
         background-position:101% center;
       }

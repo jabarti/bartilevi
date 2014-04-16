@@ -29,7 +29,7 @@ if (isset($_SESSION['user_mail'])){
 }
 ?>
 <p id="textTitle" style="color: black;"><?php echo t("NAPISZ DO MNIE"); ?></p>
-<form name="formatka" action="email_mod.php" method="post">
+<form name="formatka" action="email/email_mod.php" method="post">
     <table>
         <tr id="selfmail">
             <td><label for="text"><?php echo t("Podaj swój mail"); ?>:</label></td>

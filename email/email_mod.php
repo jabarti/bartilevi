@@ -7,7 +7,7 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
-require_once "common.inc.php";
+require_once "../common.inc.php";
 
 //include 'buttons.php';
 //echo session_id();
@@ -59,12 +59,12 @@ if (isset($_POST['mailform'])){
                 unset($_POST);
                 unset($_GET);
                   
-                header("Location: index.php?send=ok");
+                header("Location: ../index.php?send=ok");
 //                echo '<br>'.__line__.' | No.01 header("Location: index.php?send=ok")';
             } else {
                   unset($_POST);
                   unset($_GET);
-                  header("Location: index.php?send=no");
+                  header("Location: ../index.php?send=no");
 //                  echo '<br>'.__line__.' | No.02 header("Location: index.php?send=no")';
             }   
         } catch (Exception $ex) { 

@@ -26,7 +26,7 @@ if(isset($_GET['empty'])){
         $Temp_em = true;
     }
 }
-$empty = $_SESSION['empty'];
+$empty = isset($_SESSION['empty']) ? $_SESSION['empty'] : '';
 
 if(isset($_GET['fragm'])){
     $fragm = "AND `key` LIKE '%".$_GET['fragm']."%'";

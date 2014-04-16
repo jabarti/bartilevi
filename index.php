@@ -11,7 +11,7 @@ require_once "common.inc.php";
 include 'DB_Connection.php';
 $title = 'BartiLevi | '.t('Strona Główna');
 include 'header.php';
-include 'Menu.php';
+include 'Menu/Menu.php';
 include 'Log_panel.php';
 include 'buttons.php';
 include 'Translations/flag.php';
@@ -33,7 +33,7 @@ include 'Translations/flag.php';
                 <p><?php //echo t("Cogito ergo sum");?></p>
         </div>-->
         <div id="glowny_wew">
-            <?php include 'mail.php'; ?>
+            <?php include 'email/mail.php'; ?>
         </div>
 <!--        <div id="glowny_wew">
             <img src="img/no_euro.png" alt="No Picture available" style="height: 200px;"/>
