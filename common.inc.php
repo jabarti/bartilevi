@@ -14,9 +14,9 @@ if(!isset($_SESSION)){
 }else{
 //    var_dump($_SESSION);
 }
-if(!isset($ref)){
-    $ref = $_SERVER['HTTP_REFERER'];
-}
+//if(!isset($ref)){
+//    $ref = $_SERVER['HTTP_REFERER'];
+//}
 
 header('Content-Type: text/html; charset=utf-8'); 
 

@@ -18,7 +18,7 @@ include 'Translations/flag.php';
 ?>
 <body>
     <div id="glowny_index" >
-         <h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php echo t("STRONA W BUDOWIE")?> v (<?php echo t("NA BUDOWIE")?>??? :)</h4>
+         <!--<h4 STYLE="margin-left: auto; margin-right: auto; text-align: center;"><?php echo t("STRONA W BUDOWIE")?> v (<?php echo t("NA BUDOWIE")?>??? :)</h4>-->
         <!--<div id="glowny_wew" style="column-count: 2; -moz-column-count: 2; -webkit-column-count: 2">-->
         <div id="glowny_wew" style="">
             <!--<div><table style="background-image:url('img/Barti_dyplomII.JPG');width: 265px; height:350px"><tr><td></td></tr></table></div>-->
@@ -59,9 +59,13 @@ include 'Translations/flag.php';
                 =<output name="x" for="a b"></output>
             </form>
         </div>-->
+<?php include 'footer.php'; ?>
     </div>
+            <?php //include 'footer.php'; ?>
+</body>
+</html>
 <?php
-include 'footer.php';
+//include 'footer.php';
 //include 'buttons.php';
 //include 'Translations/flag.php';
 //include 'Menu.php';

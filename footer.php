@@ -1,4 +1,4 @@
-</div><!--
+<!--</div>-->
 <?php
 /*
  * commit e5933246f001d0f4d742bc7e4f3ec581fc34d32d
@@ -10,5 +10,5 @@
 <div id="footer">
 <p>Copyright @ 2014 by Bartosz M. Lewiński</p>
 </div>
-</body>
-</html>
+<!--</body>
+</html>-->
