@@ -11,26 +11,26 @@
 /* this funktion gets translation from table "localization" */
 function t($text){
     
-    $text_long='';
-    $text_leng = 100;
+    $text_long='';                                  // Container for source text
+    $text_length = 100;                             // max length of text accepted as key
 
-    if(strlen($text)>=$text_leng){
+    if(strlen($text)>=$text_length){
 //        echo "<BR>Dł tekstu1: ". strlen($text);
-        $text_long = $text;
-        $text = substr($text, 0, $text_leng);
+        $text_long = $text;                         // Container fill
+        $text = substr($text, 0, $text_length);     // cut string
 //        echo "<BR>Dł tekstu2: ". strlen($text);
 //        echo'<br>';
     }
     
-    $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'pl';
+    $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'pl';        // language
     $sql_sel = "SELECT * FROM `localization` WHERE `lang` ='".$lang."' AND `key` = '".$text."';";
     
     $temp = mysql_fetch_row(mysql_query($sql_sel));
     
     if (mysql_affected_rows()){             // if it's some result = 1, else 0;
-        if ($temp[3] == ''){
+        if ($temp[3] == ''){                // `localization` - attribute 'translation'
 //            echo $text;
-            if(strlen($text_long) >= $text_leng){
+            if(strlen($text_long) >= $text_length){
                 return $text_long;
             }else{
                 return $text;
@@ -47,7 +47,7 @@ function t($text){
 //        echo $text; 
 //        return $text;
 //        $text .= __FILE__;
-        if(strlen($text_long)<=$text_leng){
+        if(strlen($text_long)<=$text_length){
             $sql_ins = "INSERT INTO `localization`(`lang`, `key`, `file`) VALUES ('$lang','$text','$file')";
         } else {
             $sql_ins = "INSERT INTO `localization`(`lang`, `key`, `LongText`, `file`) VALUES ('$lang','$text','$text_long','$file')";
@@ -60,5 +60,9 @@ function t($text){
             return $text;
         }
     }
+}
+
+function g($text){
+    return '<b>NO TRANSLATION: </b><br>'.$text.'<br><b>END of NO TRANSLATION</b>';
 }
 

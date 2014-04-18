@@ -8,11 +8,12 @@
  ***************************************************/
 var hei = $('#imgResized').css("height");
 //$(document).ready(function(){
-function onHover(){      
+function onHover(url){      
+    url = url || '';
     $("#imgResized").mouseenter(function(){
-        $("#imgResized").animate({ height:"400px"},400, function(){
+        $("#imgResized").animate({ height:"200px"},200, function(){
 //            $("#ZDJ_01").css({"border":"1px solid black", "padding":"5px", "border-color":"blue"});
-                image = $("<img />").attr({"src":"img/Barti_dyplomII.jpg","id":"imgResized"}).css({"float":"left", "margin":"6px"});
+                image = $("<img />").attr({"src":url,"id":"imgResized"}).css({"float":"left", "margin":"6px", "height":"200px"});
                 $("#imgContener").html(image);
                 $("#imgResized").css({"border":"1px solid black", "padding":"5px", "border-color":"blue"});;
         });
@@ -22,7 +23,7 @@ function onHover(){
 function outHover(){  
     $("#imgContener").mouseout(function(){
 //        alert(hei);
-        $("#imgResized").animate({ height:"120px", "border":"", "padding":"", "border-color":""},400);
+        $("#imgResized").animate({ height:"120px", "border":"", "padding":"", "border-color":""},200);
         });
     };
 

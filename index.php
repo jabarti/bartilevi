@@ -15,6 +15,7 @@ include 'Menu/Menu.php';
 include 'Log_panel.php';
 include 'buttons.php';
 include 'Translations/flag.php';
+include 'GeoVisitors.php'
 ?>
 <body>
     <div id="glowny_index" >
@@ -23,10 +24,11 @@ include 'Translations/flag.php';
         <div id="glowny_wew" style="">
             <!--<div><table style="background-image:url('img/Barti_dyplomII.JPG');width: 265px; height:350px"><tr><td></td></tr></table></div>-->
             <!--<img src="img/Barti_dyplomII.JPG" alt="No Picture available" style="position: relative; height: 200px;"/>-->
-            <div id="imgContener" onmouseover="onHover()" onmouseout="outHover()" style="width:auto; height: auto;"><img id="imgResized" src="img/Barti_dyplomII thumb.jpg" alt="No Picture available" style="float:left; margin:6px"/></div>
+            <div id="imgContener" onmouseover="onHover('img/Barti_dyplomII.jpg')" onmouseout="outHover()" style="width:auto; height: auto;"><img id="imgResized" src="img/Barti_dyplomII thumb.jpg" alt="No Picture available" style="float:left; margin:6px"/></div>
             <div>
                 <p><?php echo t("Ego sum"); ?> :)</p>
-                <p><?php include 'text1.php'; ?> :)</p>
+                <p><?php include 'Texts/Prezentacja.php'; ?></p>
+                <!--<p><?php include 'Texts/Lorem ipsum.php'; ?> :)</p>-->
             </div>
         </div>
 <!--        <div id="glowny_wew">
@@ -37,6 +39,7 @@ include 'Translations/flag.php';
         </div>
 <!--        <div id="glowny_wew">
             <img src="img/no_euro.png" alt="No Picture available" style="height: 200px;"/>
+            <div id="imgContener" onmouseover="onHover('img/no_euro.png')" onmouseout="outHover()" style="width:auto; height: auto;"><img id="imgResized" src="img/Barti_dyplomII thumb.jpg" alt="No Picture available" style="float:left; margin:6px"/></div>
             <p id="brows"></p>
             <p><?php 
                 echo 'PLATFORM: '.$_SESSION['platform'].", BROWSER: ".$_SESSION['browser'];        
