@@ -24,6 +24,7 @@ $arr3 = explode(DIR_SEP, $_SERVER['PHP_SELF']);
 if (!defined('BASE_PATH'))              define('BASE_PATH',         dirname(__FILE__).DIRECTORY_SEPARATOR);
 if (!defined('ROOT'))                   define('ROOT',              dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR); 
 if (!defined('CLASSES_PATH'))           define('CLASSES_PATH',      BASE_PATH .'Classes'.DIRECTORY_SEPARATOR);
+if (!defined('EXT_SOUR_PATH'))          define('EXT_SOUR_PATH',     BASE_PATH .'ExternSources'.DIRECTORY_SEPARATOR);
 if (!defined('TRANSLATION_PATH'))       define('TRANSLATION_PATH',  BASE_PATH .'Translations'.DIRECTORY_SEPARATOR);
 if (!defined('IMG_PATH'))               define('IMG_PATH',          BASE_PATH .'img'.DIRECTORY_SEPARATOR);
 if (!defined('CSS_PATH'))               define('CSS_PATH',          BASE_PATH .'css'.DIRECTORY_SEPARATOR);

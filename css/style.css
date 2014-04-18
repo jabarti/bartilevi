@@ -20,6 +20,7 @@ div#glowny_index {
         margin-left: auto;
 	color: white;
         z-index: 10;
+        text-align: justify;
 }
 
 /*div#glowny_index {
@@ -114,7 +115,7 @@ p.blue, span.blue {
 color:blue;
 }
 
-p.green {
+p.green, span.green {
 color:green;
 }
 

@@ -14,8 +14,8 @@ include 'header.php';
 include 'Menu/Menu.php';
 include 'Log_panel.php';
 include 'buttons.php';
-include 'Translations/flag.php';
-include 'GeoVisitors.php'
+include TRANSLATION_PATH.'flag.php';
+include EXT_SOUR_PATH.'GeoVisitors.php'
 ?>
 <body>
     <div id="glowny_index" >
@@ -46,6 +46,15 @@ include 'GeoVisitors.php'
                 echo '<br>SCREEN: '.$_SESSION['screenWidth']." / ".$_SESSION['screenHeight'];
                ?></p>
        </div>-->
+<?php if (isset($_SESSION['admin']) && $_SESSION['admin'] != 'OK') {?>
+        <div id="glowny_wew">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20165.047067669795!2d19.11268153587792!3d50.81947722574718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1397826572017" width=96% height=95%  frameborder="1" style="border:1; padding: 8px;"></iframe>
+        </div>
+<?php } else { ?>
+        <div id="glowny_wew">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20162.412840894533!2d19.113196520008785!3d50.82557712812036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ5JzU4LjYiTiAxOcKwMDYnNDkuMSJF!5e0!3m2!1spl!2spl!4v1397826223886" width=96% height=95%  frameborder="1" style="border:1; padding: 8px;"></iframe>
+        </div>
+<?php } ?>               
 <!--        <div id="glowny_wew"><img src="img/NSZ I.jpg" alt="No Picture available" style="position: relative;height: 200px;"/>
             <p><?php //echo t("I stała się światłość");?> :) </p>
         </div>-->

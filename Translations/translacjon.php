@@ -63,6 +63,6 @@ function t($text){
 }
 
 function g($text){
-    return '<b>NO TRANSLATION: </b><br>'.$text.'<br><b>END of NO TRANSLATION</b>';
+    return '<span class="green">'.$text.'</span>';
 }
 

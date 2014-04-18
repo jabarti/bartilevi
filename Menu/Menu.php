@@ -10,7 +10,8 @@
  * ************************************************* */
 ?>
   <ol id="menu">
-    <li class="dol"><a href="#"><?php echo t("MENU") ?></a>
+    <!--<li class="dol"><a href="#"><?php echo t("MENU") ?></a>-->
+    <li class="dol"><a href="#"><?php echo t("O mnie") ?></a>
       <ul>
           <li class="prawo"><a href="Documents/20140408 CV Bartka PL INF cut.pdf" target="blank"><?php echo t("Życiorys") ?> PDF</a>
             <ol>
@@ -111,6 +112,11 @@
           <ol>
             <li><a href="http://www.emaus.czest.pl/" target="blank"><?php echo t("Wspólnota")?> Emaus</a></li>
             <li><a href="http://www.langustanapalmie.pl/" target="blank"><?php echo t("Langusta na palmie")?></a></li>
+          </ol>
+        </li><!---->
+        <li class="prawo"><a href="#"><?php echo t("Inne") ?></a>
+          <ol>
+            <li><a href="http://www.pzj.se" target="blank"><?php echo t("Zjednoczenie polskie w") ?> Jönköping</a></li>
           </ol>
         </li><!---->
 
