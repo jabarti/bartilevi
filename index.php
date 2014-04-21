@@ -55,6 +55,8 @@ include EXT_SOUR_PATH.'GeoVisitors.php'
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20162.412840894533!2d19.113196520008785!3d50.82557712812036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ5JzU4LjYiTiAxOcKwMDYnNDkuMSJF!5e0!3m2!1spl!2spl!4v1397826223886" width=96% height=95%  frameborder="1" style="border:1; padding: 8px;"></iframe>
         </div>
 <?php } ?>               
+               <div id="glowny_wew"><a href="http://tinypic.com?ref=yi361" target="_blank"></a>
+        </div>
 <!--        <div id="glowny_wew"><img src="img/NSZ I.jpg" alt="No Picture available" style="position: relative;height: 200px;"/>
             <p><?php //echo t("I stała się światłość");?> :) </p>
         </div>-->
@@ -73,6 +75,7 @@ include EXT_SOUR_PATH.'GeoVisitors.php'
         </div>-->
 <?php include 'footer.php'; ?>
     </div>
+    
             <?php //include 'footer.php'; ?>
 </body>
 </html>

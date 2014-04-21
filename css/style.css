@@ -22,6 +22,9 @@ div#glowny_index {
         z-index: 10;
         text-align: justify;
 }
+div#glowny_index p {
+    padding: 10px;
+}
 
 /*div#glowny_index {
 position: relative;
@@ -183,15 +186,17 @@ div#footer p{
         position: absolute;
         //bottom: -950px; /* 2 rows*/
         //bottom: -500px;  /*1 row*/
-        bottom: -37px;
+        bottom: -45px;
 	background: blueviolet;
         /*background: url(backgrounds/menu.png) no-repeat center center fixed;*/
         text-align: right;
 	margin-left: -10px;
 	margin-right: -10px;
 
-	width: 100%;
-        /*height: 1.5em;*/
+        /*padding: 10px 10px;*/
+        /*padding-bottom: 10px;*/
+	width: 98%;
+        height: 0.5em;
 	/*font-weight: bold;*/
         
 	/*position: relative; height: 170px;*/
