@@ -42,8 +42,8 @@ include EXT_SOUR_PATH.'GeoVisitors.php'
             <div id="imgContener" onmouseover="onHover('img/no_euro.png')" onmouseout="outHover()" style="width:auto; height: auto;"><img id="imgResized" src="img/Barti_dyplomII thumb.jpg" alt="No Picture available" style="float:left; margin:6px"/></div>
             <p id="brows"></p>
             <p><?php 
-                echo 'PLATFORM: '.$_SESSION['platform'].", BROWSER: ".$_SESSION['browser'];        
-                echo '<br>SCREEN: '.$_SESSION['screenWidth']." / ".$_SESSION['screenHeight'];
+//                echo 'PLATFORM: '.$_SESSION['platform'].", BROWSER: ".$_SESSION['browser'];        
+//                echo '<br>SCREEN: '.$_SESSION['screenWidth']." / ".$_SESSION['screenHeight'];
                ?></p>
        </div>-->
 <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] != 'OK') {?>

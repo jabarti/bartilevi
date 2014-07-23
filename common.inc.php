@@ -22,9 +22,9 @@ header('Content-Type: text/html; charset=utf-8');
 
 require 'Paths.php';
 
-mysql_query('SET NAMES utf8');
+//mysql_query('SET NAMES utf8');
 
-mb_internal_encoding('UTF-8');
+//mb_internal_encoding('UTF-8');
 
 if (isset($_GET['lang'])||isset($_SESSION['lang'])){
     if(isset($_GET['lang']))

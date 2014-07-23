@@ -10,7 +10,7 @@
  * ************************************************* */
 /* this funktion gets translation from table "localization" */
 function t($text){
-    
+
     $text_long='';                                  // Container for source text
     $text_length = 100;                             // max length of text accepted as key
 

@@ -23,6 +23,6 @@
 	<link rel="Stylesheet" type="text/css" href="css/style.css" />
         <link rel="Stylesheet" type="text/css" href="css/Popup.css" />
         <link rel="Stylesheet" type="text/css" href="Translations/translation.css" />
-
+        
         <meta charset="utf-8"/>
 </head>
