@@ -36,7 +36,7 @@ if(isset($_GET['fragm'])){
 
 $curr_lang = isset($_GET['jezyk']) ? $_GET['jezyk'] : $_SESSION['lang']; 
 //$sql = "SELECT * FROM `localization` WHERE `lang` = 'pl';";
-$sql = "SELECT * FROM `localization` WHERE (`lang` = '".$curr_lang."' ".$empty." ".$fragm.") ORDER BY `localization`.`key` ASC;";
+$sql = "SELECT * FROM `bartilev_APIPO`.`localization` WHERE (`lang` = '".$curr_lang."' ".$empty." ".$fragm.") ORDER BY `localization`.`key` ASC;";
 //echo '<br>SQL: '.$sql;
 $res = mysql_query($sql);
 

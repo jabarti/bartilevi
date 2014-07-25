@@ -9,8 +9,18 @@
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
 /* this funktion gets translation from table "localization" */
-function t($text){
-
+function t($text, $language){
+    
+    $lang = $lang ? $lang : isset($_SESSION['lang']) ;//? $_SESSION['lang'] : 'pl';        // language
+    if(isset($language)){
+        $lang = $language;
+    } elseif (isset($_SESSION['lang'])){
+        $lang = $_SESSION['lang'];
+    } else {
+        $lang = 'pl';
+    }
+    
+    
     $text_long='';                                  // Container for source text
     $text_length = 100;                             // max length of text accepted as key
 
@@ -22,8 +32,8 @@ function t($text){
 //        echo'<br>';
     }
     
-    $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'pl';        // language
-    $sql_sel = "SELECT * FROM `localization` WHERE `lang` ='".$lang."' AND `key` = '".$text."';";
+
+    $sql_sel = "SELECT * FROM `bartilev_APIPO`.`localization` WHERE `lang` ='".$lang."' AND `key` = '".$text."';";
     
     $temp = mysql_fetch_row(mysql_query($sql_sel));
     
@@ -37,6 +47,7 @@ function t($text){
             }
         }else{
 //            echo $temp[2];
+//            return $temp[3].$language;
             return $temp[3];
         }
     } else {
@@ -48,14 +59,14 @@ function t($text){
 //        return $text;
 //        $text .= __FILE__;
         if(strlen($text_long)<=$text_length){
-            $sql_ins = "INSERT INTO `localization`(`lang`, `key`, `file`) VALUES ('$lang','$text','$file')";
+            $sql_ins = "INSERT INTO `bartilev_APIPO`.`localization` (`lang`, `key`, `file`) VALUES ('$lang','$text','$file');";
         } else {
-            $sql_ins = "INSERT INTO `localization`(`lang`, `key`, `LongText`, `file`) VALUES ('$lang','$text','$text_long','$file')";
+            $sql_ins = "INSERT INTO `bartilev_APIPO`.`localization` (`lang`, `key`, `LongText`, `file`) VALUES ('$lang','$text','$text_long','$file');";
         }
         
         
         if(!mysql_query($sql_ins)){
-            return "<br>ERROR in sql: ".strlen($sql_ins).$sql_ins;
+            return "<br>ERROR in sql: ".strlen($sql_ins)." SQL:".$sql_ins;
         }else{
             return $text;
         }
