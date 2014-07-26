@@ -10,8 +10,13 @@
  * ************************************************* */
 /* this funktion gets translation from table "localization" */
 function t($text, $language){
+//    if(isset($_SESSION['lang'])){
+//        $lang = $lang ? $lang : $_SESSION['lang'] ;
+//    }else{
+//        $lang = $lang ? $lang : 'pl';
+//    }
+//    $lang = $lang ? $lang : $_SESSION['lang'] ;//? $_SESSION['lang'] : 'pl';        // language
     
-    $lang = $lang ? $lang : isset($_SESSION['lang']) ;//? $_SESSION['lang'] : 'pl';        // language
     if(isset($language)){
         $lang = $language;
     } elseif (isset($_SESSION['lang'])){
