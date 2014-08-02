@@ -47,7 +47,7 @@ $res = mysql_query($sql);
         <option value="pl"><?php echo t("Polski")?></option> 
         <option value="en"><?php echo t("Angielski")?></option>
         <option value="se"><?php echo t("Szwedzki")?></option>
-        <!--<option value="se"><?php echo t("Hiszpański")?></option>-->
+        <!--<option value="sp"><?php echo t("Hiszpański")?></option>-->
     </select>
     <input type="submit" value="<?php t("Zmień język"); ?> =>">
 </form>

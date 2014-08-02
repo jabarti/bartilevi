@@ -31,7 +31,7 @@ if(isset($_GET['tlum'])){
 //    }
 }
 
-if(isset($_GET[del])){
+if(isset($_GET['del'])){
         
 //    if($_GET['translation'] == ''){
 //        header("Location: ../translation_panel.php");
