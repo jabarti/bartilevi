@@ -59,25 +59,33 @@ if (strpos($_SERVER['HTTP_USER_AGENT'],'Mozilla'))
 var screenWidth = window.screen.width;
 var screenHeight = window.screen.height;
 
-$.ajax ({
-    'type': 'POST',  
-            'url':  'common.inc.php',
-            'data':{
-                
-                            'action':           'try',
-                            'screenWidth':      screenWidth,
-                            'screenHeight':     screenHeight
-                },  
-                success: function(data) {
-                    if( data == '0' ){
-                        alert ('ERROR');
-                   }else{
-//                        alert ("OK: "+screenWidth+" / "+screenWidth);
-                        $('#brows').html('Ala ma kotka');
-                   }
-                   
-                }  
+
+$(document).ready(function(){
+    $('#butto_1').click(function(){
+        var varto = $('#input_1').val();
+        $('#trans_1').val(varto);
+    });
 });
+
+//$.ajax ({
+//    'type': 'POST',  
+//            'url':  'common.inc.php',
+//            'data':{
+//                
+//                            'action':           'try',
+//                            'screenWidth':      screenWidth,
+//                            'screenHeight':     screenHeight
+//                },  
+//                success: function(data) {
+//                    if( data == '0' ){
+//                        alert ('ERROR');
+//                   }else{
+////                        alert ("OK: "+screenWidth+" / "+screenWidth);
+//                        $('#brows').html('Ala ma kotka');
+//                   }
+//                   
+//                }  
+//});
 </script>
 <?php
 if (isset($_POST['screenWidth']) && isset($_POST['screenHeight'])){

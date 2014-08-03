@@ -41,6 +41,21 @@ $(document).ready(function(){
 //        image = $("<img />").attr({"src":"img/Barti_dyplomII thumb.jpg","id":"ZDJ_01"}).css({"float":"left", "margin":"6px"});
 //        $("#IMG_001").html(image);
 //    });
+    $('button').click(function(){       // To jest f-cja do porzesyłania danych w translation_panel z słowo PL => trans
+        var ID = $(this).attr('id');
+        var pos1 = ID.search("_")
+        var nID = ID.slice(pos1);
+//        alert("ID:"+ID+", pos of _:"+pos1+", nID:"+nID);
+        var varto = $('#input'+nID).val();       
+//        alert(varto)
+        $('#trans'+nID).val(varto);
+    });
 });
+
+//function sendToTrans(){
+//    var text = document.getElementById('input_2').value;
+////    alert(text);
+//    document.getElementById('trans_2').value=text;
+//}
 
 

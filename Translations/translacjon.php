@@ -37,10 +37,10 @@ function t($text){
     
 
     $sql_sel = "SELECT * FROM `bartilev_APIPO`.`localization` WHERE `lang` ='".$lang."' AND `key` = '".$text."';";
-    
-    $temp = mysql_fetch_row(mysql_query($sql_sel));
+    $mq=mysql_query($sql_sel);
     
     if (mysql_affected_rows()){             // if it's some result = 1, else 0;
+        $temp = mysql_fetch_row($mq);
         if ($temp[3] == ''){                // `localization` - attribute 'translation'
 //            echo $text;
             if(strlen($text_long) >= $text_length){
@@ -106,10 +106,10 @@ function tl($text, $language){
     
 
     $sql_sel = "SELECT * FROM `bartilev_APIPO`.`localization` WHERE `lang` ='".$lang."' AND `key` = '".$text."';";
-    
-    $temp = mysql_fetch_row(mysql_query($sql_sel));
-    
+    $mq = mysql_query($sql_sel);
+        
     if (mysql_affected_rows()){             // if it's some result = 1, else 0;
+        $temp = mysql_fetch_row($mq);
         if ($temp[3] == ''){                // `localization` - attribute 'translation'
 //            echo $text;
             if(strlen($text_long) >= $text_length){

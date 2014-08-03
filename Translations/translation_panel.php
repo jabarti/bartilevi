@@ -74,33 +74,41 @@ $res = mysql_query($sql);
         <th class="th1"><?php echo t("język"); ?></th>
         <th></th>
         <th><?php echo t("tekst klucz"); ?></th>
+        <th></th>
         <th><?php echo t("tłumaczenie"); ?></th>
         <th><?php echo t("plik"); ?></th>
         <th><?php echo t("długość"); ?></th>
     </tr>
-    <?php while($row = mysql_fetch_array($res)){ ?>
+    <?php 
+    $licz=1;
+    while($row = mysql_fetch_array($res)){ ?>
     <tr>
-    <form action="Translations/translation_panel_mod.php" method="get">
+    <form id='<?php echo "form_".$licz; ?>'action="Translations/translation_panel_mod.php" method="get">
             <td><input type="text" size="3" name="lang" value="<?php echo $row[0]; ?>" readonly="readonly"></td>
             <?php if( $row[2] == '') { ?>
                 <td><input type="hidden" name="LongText" value="<?php echo $row[2]; ?>" readonly="readonly"></td>
-                <td><input type="text" size=45% name="key" value="<?php echo $row[1]; ?>" readonly="readonly"></td>
-                <td><input type="text" size=45% name="translation" value="<?php echo $row[3]; ?>" ></td>
+                <td><input id='<?php echo "input_".$licz; ?>'type="text" size=45% name="key" value="<?php echo $row[1]; ?>" readonly="readonly"></td>
+                <td><button size=1 type=button id='<?php echo "butto_".$licz; ?>'>=></button></td>
+                <td><input id='<?php echo "trans_".$licz; ?>'type="text" size=45% name="translation" value="<?php echo $row[3]; ?>" ></td>
                 <td><input type="text" size=17 name="file" value="<?php echo $row[4]; ?>" readonly="readonly"></td>
                 <td><input  size=5 type="text" value="<?php echo strlen($row[1]).'/'.strlen($row[3]); ?>"></td> 
             <?php }else{ ?>
                 <td><input type="hidden" name="key" value="<?php echo $row[1]; ?>" readonly="readonly"></td>
                 <td><textarea rows="4" cols="33"  name="LongText" readonly="readonly"><?php echo $row[2]; ?></textarea></td>
+                <td><button size=1 type=button id='<?php echo "butto_".$licz; ?>'>=></button></td>
                 <td><textarea rows="4" cols="33"  name="translation" ><?php echo $row[3]; ?></textarea></td>
                 <td><input type="text" size=17 name="file" value="<?php echo $row[4]; ?>" readonly="readonly"></td>
                 <td><input  size=5 type="text" value="<?php echo strlen($row[2]).'/'.strlen($row[3]); ?>"></td> 
-            <?php } ?>
+                
+             <?php } ?>
             <td><input name=tlum type="submit" value="<?php echo t("Zapisz"); ?> =>"></td>       
             <td><input name=del type="submit" value="<?php echo t("Usuń"); ?> =>"></td>       
   
         </form>
     </tr>
-    <?php } ?>
+    <?php 
+    $licz++;
+    } ?>
 </table>
 
 <?php
