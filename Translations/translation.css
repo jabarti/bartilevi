@@ -90,6 +90,12 @@ div.transbutton2 {
     float: left;
 }
 
+#plik {
+    /*background-color: chartreuse;*/
+    width: 200px;
+    float: left;
+}
+
 #szukacz {
     /*background-color: chocolate;*/
     width: 250px;

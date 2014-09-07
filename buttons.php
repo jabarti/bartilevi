@@ -6,6 +6,7 @@
             <a href="next3.php" class="myButton"><?php echo t("Do"); ?> Popups</a>
             <a href="ZZZProba_WEB" class="myButton"><?php echo t("Do"); ?> ZZZProba_WEB</a>
             <a href="Svenska" class="myButton"><?php echo t("Do"); ?> Svenska </a>
+            <a href="Biblioteka" class="myButton"><?php echo t("Do")." ".t('Biblioteka'); ?> </a>
             <a href="http://macius-i-zuzia-lewinscy.bloog.pl/" class="myButton" target="blank"><?php echo t("Do"); ?> <?php echo t("Blog Maciusia i Zuzi"); ?></a>
             <a href="http://bartus-lewinski.bloog.pl/" class="myButton" target="blank"><?php echo t("Do"); ?> <?php echo t("mojego Bloga"); ?></a>
         <?php } ?>

@@ -41,7 +41,7 @@ $(document).ready(function(){
 //        image = $("<img />").attr({"src":"img/Barti_dyplomII thumb.jpg","id":"ZDJ_01"}).css({"float":"left", "margin":"6px"});
 //        $("#IMG_001").html(image);
 //    });
-    $('button').click(function(){       // To jest f-cja do porzesyłania danych w translation_panel z słowo PL => trans
+    $('button.butt_trans').click(function(){       // To jest f-cja do porzesyłania danych w translation_panel z słowo PL => trans
         var ID = $(this).attr('id');
         var pos1 = ID.search("_")
         var nID = ID.slice(pos1);

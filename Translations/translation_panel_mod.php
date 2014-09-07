@@ -51,3 +51,20 @@ if(isset($_GET['del'])){
         }
 //    }
 }
+
+if (isset($_GET['plik'])){
+//    switch($_GET['plik']){
+//        case 'Svenska':
+//            $_SESSION['transl_plik'] = $_GET['plik'];
+//            break;
+//        default:
+//            unset($_SESSION['transl_plik']);
+//            break;
+//    }
+    if($_GET['plik'] != ''){
+        $_SESSION['transl_plik'] = $_GET['plik'];
+    }else{
+        unset($_SESSION['transl_plik']);
+    }
+    header("Location: ../translation_interface.php");
+}
