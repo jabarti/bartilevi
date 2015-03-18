@@ -13,7 +13,22 @@
     <!--<li class="dol"><a href="#"><?php echo t("MENU") ?></a>-->
     <li class="dol"><a href="#"><?php echo t("O mnie") ?></a>
       <ul>
-          <li class="prawo"><a href="Documents/20140408 CV Bartka PL INF cut.pdf" target="blank"><?php echo t("Życiorys") ?> PDF</a>
+          <?php
+          switch ($_SESSION['lang']){
+              case 'pl':
+                  ?><li class="prawo"><a href="Documents/20140408 CV Bartka PL INF cut.pdf" target="blank"><?php echo t("Życiorys") ?> PDF</a><?php
+                  break;
+              case 'se':
+                  ?><li class="prawo"><a href="Documents/20150310 CV Bartka - inf - sve.pdf" target="blank"><?php echo t("Życiorys") ?> PDF</a><?php
+                  break;
+              case 'en':
+                  ?><li class="prawo"><a href="Documents/20150310 CV Bartka - inf - eng.pdf" target="blank"><?php echo t("Życiorys") ?> PDF</a><?php
+                  break;
+              default:
+                  ?><li class="prawo"><a href="Documents/20140408 CV Bartka PL INF cut.pdf" target="blank"><?php echo t("Życiorys") ?> PDF</a><?php
+                  break;
+          }
+          ?>
             <ol>
                 <li><a href="#" class="prawo topopup" ><?php echo t("Przedstawienie") ?></a>
                     <ol>

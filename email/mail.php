@@ -53,7 +53,11 @@ if (isset($_SESSION['user_mail'])){
         </tr>
     </table>
 </form>
-<?php if($send == 1){ 
+
+
+<?php 
+// Informacja zwrotna, czy mail poszedł
+if($send == 1){ 
      echo '<p id="potw">'.t("Mail wysłany").'!</p>';
 }else if($send == -1){
     echo '<p id="potw">'.t("Mail nie wysłany").' - '.t("brak tematu").' '.t("lub").'/'.t("i").' '.t("treści").'</p>';
