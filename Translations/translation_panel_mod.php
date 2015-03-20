@@ -19,8 +19,8 @@ if(isset($_GET['tlum'])){
 //    if($_GET['translation'] == ''){
 //        header("Location: ../translation_panel.php");
 //    }else{
-        $sql = "UPDATE `bartilev_APIPO`.`localization` SET `translation`='".$_GET['translation']."'"
-              ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
+        $sql = "UPDATE `bartilev_APIPO`.`localization` SET `translation`='".addslashes($_GET['translation'])."'"
+              ."WHERE `key`='".addslashes($_GET['key'])."' AND `lang`='".$_GET['lang']."';";
         echo "<br>SQL = ".$sql;
         
         if(mysql_query($sql)){
@@ -37,7 +37,7 @@ if(isset($_GET['del'])){
 //        header("Location: ../translation_panel.php");
 //    }else{
         $sql = "DELETE FROM `bartilev_APIPO`.`localization`"
-              ."WHERE `key`='".$_GET['key']."' AND `lang`='".$_GET['lang']."';";
+              ."WHERE `key`='".addslashes($_GET['key'])."' AND `lang`='".$_GET['lang']."';";
 //        $sql = "DELETE FROM `localization`WHERE `key`='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n incididunt ut labore et dolore magna aliqua.' AND `lang`='en';";
 //        $sql = "DELETE FROM `localization`WHERE                                                                 `key` = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\\n incididunt ut labore et dolore magna aliqua.' AND `lang`='en';";
 //        $sql = "DELETE FROM `bartilev_APIPO`.`localization` WHERE `localization`.`lang` = 'en' AND `localization`.`key` = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n incididunt ut labore et dolore magna aliqua.'"; 
@@ -66,5 +66,14 @@ if (isset($_GET['plik'])){
     }else{
         unset($_SESSION['transl_plik']);
     }
-    header("Location: ../translation_interface.php");
+        header("Location: ../translation_interface.php");
 }
+
+if(isset($_GET['fragm'])){
+    echo "<br>".__LINE__." / isset get(fragm) i nie jest pusty: ".$_GET['fragm'];
+    $_SESSION['fragm'] = $_GET['fragm'];
+
+    if($_GET['fragm']=='')
+        unset($_SESSION['fragm']);
+}
+header("Location: ../translation_interface.php");

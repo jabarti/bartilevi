@@ -17,6 +17,8 @@ function t($text){
 //    }
 //    $lang = $lang ? $lang : $_SESSION['lang'] ;//? $_SESSION['lang'] : 'pl';        // language
     
+    $text = addslashes($text);
+    
     if (isset($_SESSION['lang'])){
         $lang = $_SESSION['lang'];
     } else {

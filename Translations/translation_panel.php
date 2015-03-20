@@ -12,6 +12,8 @@
 
 //if (isset($_GET['jezyk'])) echo $_GET['jezyk'];
 
+//var_dump($_SESSION);
+
 $Temp_em = false;
 if(isset($_GET['empty'])){
     if($_GET['val']=='puste'){
@@ -28,11 +30,12 @@ if(isset($_GET['empty'])){
 }
 $empty = isset($_SESSION['empty']) ? $_SESSION['empty'] : '';
 
-if(isset($_GET['fragm'])){
-    $fragm = "AND `key` LIKE '%".$_GET['fragm']."%'";
+if(isset($_SESSION['fragm'])){
+    $fragm = "AND `key` LIKE '%".$_SESSION['fragm']."%'";
 }else{
     $fragm=''; 
 }
+
 if(isset($_SESSION['transl_plik'])){
     $plik = "AND `File` LIKE '%".$_SESSION['transl_plik']."%'";
 }else{
@@ -110,7 +113,7 @@ $res = mysql_query($sql);
         <input type="submit" value="<?php echo t("Jaki plik")."?"; ?>">               
     </form>
 
-    <form id="szukacz" action="" method="get">
+    <form id="szukacz" action="Translations/translation_panel_mod.php" method="get">
          <input type="text" name="fragm" >
          <input type="submit" value="<?php echo t("Znajdź"); ?>"/>          
     </form>
