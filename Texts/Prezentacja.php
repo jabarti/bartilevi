@@ -11,6 +11,7 @@
 
 
 echo "&nbsp;&nbsp;&nbsp;&nbsp;"
+        . t("DO TŁUMACZENIA!!!")
         . g("Od 2013r jestem inżynierem informatyki. Wcześniej studiowałem fizykę na Uniwersytecie Wrocławskim. Teraz studiuję informatykę (II stopień) na Politechnice Częstochowskiej. "
           . "Interesuję się naukami ścisłymi, między innymi fizyką, informatyką i matematyką. Ale także ekonomią i polityką. ")  .
      "<br>&nbsp;&nbsp;&nbsp;&nbsp;"
